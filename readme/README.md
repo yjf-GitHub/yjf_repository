@@ -52,7 +52,7 @@ All available target list:
 ```
 
 # Compiling
-## GL.iNet Util compilation method
+## (1)GL.iNet Util compilation method
 
 We provide a script to compile all software packages with all targets SDK or compile all software packages with a single target SDK. You are freely and quickly compile packages for each platform.
 
@@ -85,24 +85,44 @@ Or run the following command to compile packages for all platform,
 $ ./builder.sh -d [packages_path] -a
 ```
 
-## Steps to compile the hello_world package
+## Demo: Compile the hello_world package
 
-Enter the SDK directory of clone GL.inet and download the SDK of corresponding platform of AR750
+1.Enter the SDK directory of clone GL.iNet and download the SDK of corresponding platform of AR750
 ```
-cd sdk
-./builder.sh ar71xx-1806
+$ cd sdk
+$ ./builder.sh ar71xx-1806
 ```
-Compile the hello_world package in the test directory for the AR71Xx-1806 platform
-```
-./builder.sh -d test/hello_world -t ar71xx-1806
-```
-The compiled software package will be in the sdk/1806/ar71xx/bin/packages/mips_24kc/base folder
 
-If you want to compile the hello_world package for all platforms, enter the following command
+2.Compile the test/hello_world package for the ar71xx-1806 platform
+The compiled packages will be located in the `sdk/1806/ar71xx/bin/packages/mips_24kc/base` folder
 ```
-./builder.sh -d test/hello_world -a
+$ ./builder.sh -d test/hello_world -t ar71xx-1806
 ```
-If the compilation process is too slow, that may be why cloning the sdk is slow.Before executing “./builder.sh -d [packages_path] -a”,you can use "./download.sh [target]" to download the sdks for each platform.
+
+1.If you want to compile the hello_world package for all platforms, enter the following command
+```
+$ ./builder.sh -d test/hello_world -a
+```
+
+2.Compiling packages for all platforms for the first time is busy, so it can be done in steps.
+Use `./builder.sh [option]` to download the SDKS for all platforms
+Execute again `./builder.sh -d [packages_path] -a`
+
+## (2)Official compilation method
+
+1.Place your package in `sdk/<version>/<target>/package/`, then run:
+
+```
+$ cd sdk/<version>/<target>/
+$ make package/<package_name>/compile V=s
+```
+
+2.For example, to compile the OpenSSL package for the `ar71xx` target, it will look like this:
+The compiled package will be in the `sdk/<version>/<target>/bin/` folder
+```
+$ cd sdk/1806/ar71xx
+$ make package/openssl/{clean,compile} V=s
+```
 
 # Installing
 
@@ -116,4 +136,56 @@ Then running:
 $ opkg install <package_name>.ipk
 ```
 
- Will install the package on the device without internet. 
+Will install the package on the device without internet. 
+ 
+
+# Common mistakes
+
+It is recommended that you use the `V=s` flag at the end of the `make` command, but it is not required. The compiler will print all messages and show if there are any errrors. If you know the packages are all correct, you can omit it for a more clean output.
+
+Some packages require other packages to compile. If your package gives warnings like this:
+
+```
+WARNING: Makefile 'package/ddserver/Makefile' has a dependency on 'uclibcxx', which does not exist
+```
+
+Before the compilation begins, or when compiling with the `V=s` flag you get an error towards the end like this:
+
+```
+Package ddserver is missing dependencies for the following libraries:
+libuClibc++.so.0
+```
+
+You will need to install the dependency before compiling your package. To do that run:
+
+```
+$ ./scripts/feeds update -f
+```
+
+This will update the package lists, then run:
+
+```
+$ ./scripts/feeds install <dependency_name>
+```
+
+For the example above, it required the uClibc++ library, so we install it:
+
+```
+$ ./scripts/feeds install uclibcxx
+```
+
+Re-run the `make package/<package_name>/compile V=s` command and your package should compile without issues.
+ 
+------
+
+```
+To make a custom package from any program you can follow the guides here:
+```
+
+https://github.com/mwarning/openwrt-examples
+
+```
+And read about the OpenWRT package structure here:
+```
+
+https://openwrt.org/docs/guide-developer/packages
