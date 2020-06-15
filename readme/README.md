@@ -93,8 +93,7 @@ $ cd sdk
 $ ./builder.sh ar71xx-1806
 ```
 
-2.Compile the test/hello_world package for the ar71xx-1806 platform
-The compiled packages will be located in the `sdk/1806/ar71xx/bin/packages/mips_24kc/base` folder
+2.Compile the test/hello_world package for the ar71xx-1806 platform  The compiled packages will be located in the `sdk/1806/ar71xx/bin/packages/mips_24kc/base` folder
 ```
 $ ./builder.sh -d test/hello_world -t ar71xx-1806
 ```
@@ -104,9 +103,7 @@ $ ./builder.sh -d test/hello_world -t ar71xx-1806
 $ ./builder.sh -d test/hello_world -a
 ```
 
-2.Compiling packages for all platforms for the first time is busy, so it can be done in steps.
-Use `./builder.sh [option]` to download the SDKS for all platforms
-Execute again `./builder.sh -d [packages_path] -a`
+2.Compiling packages for all platforms for the first time is busy, so it can be done in steps.  Use `./builder.sh [option]` to download the SDKS for all platforms  Execute again `./builder.sh -d [packages_path] -a`
 
 ## (2)Official compilation method
 
