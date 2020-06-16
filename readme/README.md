@@ -85,7 +85,7 @@ Or run the following command to compile packages for all platform,
 $ ./builder.sh -d [packages_path] -a
 ```
 
-## Demo: Compile the hello_world package
+## Demo: Compile the hello_world package for AR750
 
 1.Enter the SDK directory of clone GL.iNet and download the SDK of corresponding platform of AR750
 ```
