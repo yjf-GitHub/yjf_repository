@@ -93,7 +93,7 @@ $ cd sdk
 $ ./download.sh ar71xx-1806
 ```
 
-2.Compile the example/hello_world package for the ar71xx-1806 package.The compiled packages will be located in the `sdk/1806/ar71xx/bin/packages/mips_24kc/base` folder
+2.Compile the `example/hello_world` package for the ar71xx-1806 package.The compiled packages will be located in the `sdk/1806/ar71xx/bin/packages/mips_24kc/base` folder
 ```
 $ ./builder.sh -d example/hello_world -t ar71xx-1806
 ```
@@ -139,7 +139,7 @@ After the hello_world package above is installed successfully, run the following
 ```
 $ /mnt/hello_world
 ```
-Will be displayed on the screen
+This will appear on the screen as follows.
 ```
 ****************
 **Hello world!**
