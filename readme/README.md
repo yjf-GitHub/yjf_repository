@@ -93,7 +93,7 @@ $ cd sdk
 $ ./download.sh ar71xx-1806
 ```
 
-2.Compile the example/hello_world package for the ar71xx-1806 platform  The compiled packages will be located in the `sdk/1806/ar71xx/bin/packages/mips_24kc/base` folder
+2.Compile the example/hello_world package for the ar71xx-1806 package.The compiled packages will be located in the `sdk/1806/ar71xx/bin/packages/mips_24kc/base` folder
 ```
 $ ./builder.sh -d example/hello_world -t ar71xx-1806
 ```
@@ -103,7 +103,9 @@ $ ./builder.sh -d example/hello_world -t ar71xx-1806
 $ ./builder.sh -d example/hello_world -a
 ```
 
-2.Compiling packages for all platforms for the first time is busy, so it can be done in steps.  Use `./builder.sh [option]` to download the SDKS for all platforms  Execute again `./builder.sh -d [packages_path] -a`
+2.Compiling packages for all platforms for the first time is slow,so it can be done in steps.  
+
+Use `./builder.sh [option]` to download the SDKS for all platforms. Execute again `./builder.sh -d [packages_path] -a`
 
 ## (2) Official compilation method
 
@@ -133,7 +135,7 @@ $ opkg install <package_name>.ipk
 ```
 Will install the package on the device without internet. 
 
-After the hello_World package above is installed successfully, run the following command
+After the hello_world package above is installed successfully, run the following command
 ```
 $ /mnt/hello_world
 ```
