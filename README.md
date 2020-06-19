@@ -44,8 +44,23 @@ cd gl_imagebuilder
 The Imagebuilder requires a "case sensitive" system, Windows is unfortunately not. To run the Imagebuilder in WSL you **MUST** clone the repo to the linux folder tree, ie: ```/home/<username>/``` or any other folder you choose. This is required, you **CAN NOT** run it from ```/mnt/c/``` or any other windows native drive mounted in WSL. Running the Imagebuilder from a Windows mounted disk will result in a failed build with cryptic messages.
 
 ## Usage ##
-
-You can list all the device names by running **./gl_image -l**. To build a specific firmware, run **./gl_image -p <image_name>**. To build all the device firmwares, run **./gl_image -a**. Run **./gl_image -h** to see more details and advanced options.
+### Basic usage ###
+You can list all the device names by running the following command.
+```
+$ ./gl_image -l
+```
+You can run **./gl_image -p <image_name>** to build a specific firmware.For example, if you want to build a mifi firmware, run 
+```
+$ ./gl_image -p mifi
+```
+To build all the device firmwares, run 
+```
+$ ./gl_image -a
+```
+To see more details and advanced options,run
+```
+$ ./gl_image -h
+```
 
 ### Use your own configuration ###
 To use your own configuration, use the **customize.json** file. Make any changes and run the imagebuilder with the following command to run the custom configuration:
