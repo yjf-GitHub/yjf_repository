@@ -44,7 +44,7 @@ cd gl_imagebuilder
 The Imagebuilder requires a "case sensitive" system, Windows is unfortunately not. To run the Imagebuilder in WSL you **MUST** clone the repo to the linux folder tree, ie: ```/home/<username>/``` or any other folder you choose. This is required, you **CAN NOT** run it from ```/mnt/c/``` or any other windows native drive mounted in WSL. Running the Imagebuilder from a Windows mounted disk will result in a failed build with cryptic messages.
 
 ## Usage ##
-### Basic usage ###
+**Basic usage**
 You can list all the device names by running the following command.
 ```
 $ ./gl_image -l
