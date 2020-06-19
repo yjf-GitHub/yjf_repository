@@ -44,7 +44,9 @@ cd gl_imagebuilder
 The Imagebuilder requires a "case sensitive" system, Windows is unfortunately not. To run the Imagebuilder in WSL you **MUST** clone the repo to the linux folder tree, ie: ```/home/<username>/``` or any other folder you choose. This is required, you **CAN NOT** run it from ```/mnt/c/``` or any other windows native drive mounted in WSL. Running the Imagebuilder from a Windows mounted disk will result in a failed build with cryptic messages.
 
 ## Usage ##
+
 **Basic usage**
+
 You can list all the device names by running the following command.
 ```
 $ ./gl_image -l
@@ -62,12 +64,13 @@ To see more details and advanced options,run
 $ ./gl_image -h
 ```
 
-### Use your own configuration ###
+**Use your own configuration**
+
 To use your own configuration, use the **customize.json** file. Make any changes and run the imagebuilder with the following command to run the custom configuration:
 
 **./gl_image -c customize.json -p <image_name>**
 
-### Add additional packages ###
+**Add additional packages**
 
 For example, make an image for the **Mifi** with some [extra packages](https://openwrt.org/packages/start) included:
 
