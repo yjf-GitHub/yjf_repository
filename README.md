@@ -2,7 +2,7 @@
 
 Imagebuilder for GL.iNet devices. The Imagebuilder (previously called the Image Generator) is a pre-compiled environment suitable for creating custom images without having to compile the entire OpenWRT build environment.
 
-## Introduction
+## Introduction ##
 
 As the old imagebuilder repository gets bigger and bigger, it makes it harder to download and use. Because of this we have improved the imagebuilder code. It is smaller and faster than before, however, executing 'git pull' under the old imagebuilder will conflict, so please clone the new imagebuilder to a new directory or delete the old one. The old imagebuilder has been moved to https://github.com/gl-inet/imagebuilder_archive.
 
@@ -72,10 +72,10 @@ $ ./gl_image -c customize.json -p mifi
 ```
 **3.Add additional packages**
 
-For example, make an image for the **Mifi** with some [extra packages](https://openwrt.org/packages/start) included:
+For example, make an image for the **mifi** with some [extra packages](https://openwrt.org/packages/start) included:
 
 ```bash
-./gl_image -p mifi -e "openssh-sftp-server nano htop"
+$ ./gl_image -p mifi -e "openssh-sftp-server nano htop"
 ```
 You'll find the compiled firmware image in *bin/gl-mifi/openwrt-mifi-ar71xx-generic-gl-mifi-squashfs-sysupgrade.bin*
 
@@ -86,7 +86,7 @@ For other firmwares, the compiled firmware file is in **bin/<device_name>/**
 Make sure you have compiled it once. It will automatically download the specified imagebuilder and glinet repository. 
 
 ### Example 1
-Select the version you want to make, sush as mifi
+Select the version you want to make, such as mifi
 
 1. clone imagebuilder
 ```
@@ -106,7 +106,7 @@ $ ./gl_image -p mifi
 ```
 
 ### Example 2
-Select another branch to compile
+Select another branch to compile,such as ar750s branch
 
 1. clone imagebuilder
 ```
@@ -134,11 +134,45 @@ $ cd ../
 $ ./gl_image -p ar750s
 ```
 
+### Example 3
+Choose another tag to compile the version you want, such as the 3.025 ar750s firmware
+
+1. clone imagebuilder
+```
+$ git clone https://github.com/gl-inet/imagebuilder.git
+```
+2. switch to imagebuilder folder
+```
+$ cd imagebuilder
+```
+3. clone glinet (default master branch)
+```
+$ git clone https://github.com/gl-inet/glinet.git
+```
+4. go to the glinet directory and view the history tag
+```
+$ cd glinet
+$ git tag
+```
+5. switch to the 3.025 version of the ar750s firmware tag
+```
+$ git checkout ar750s_v3.025_20190626
+```
+6. return to the imagebuilder folder
+```
+$ cd ../
+```
+7. compile firmware
+```
+$ ./gl_image -i -p ar750s
+```
+
+**Oops! Failed to parse glinet/images.json**
 Warnning, If you encounter this error, don't panic. Please copy the corresponding version in the config directory to the glinet directory and run again.
 
 ```
-$ cp config/images.json.3.023 glinet/images.json
-$ ./gl_image -i -p mifi
+$ cp config/images.json.3.025 glinet/images.json
+$ ./gl_image -i -p ar750s
 ```
 
 ## Docker build environment ##
