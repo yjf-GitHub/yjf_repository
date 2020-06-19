@@ -86,7 +86,7 @@ For other firmwares, the compiled firmware file is in **bin/<device_name>/**
 Make sure you have compiled it once. It will automatically download the specified imagebuilder and glinet repository. 
 
 ### Example 1
-Select the version you want to make, such as mifi
+Select the GL.iNet standard firmware that you want to make,such as the mifi
 
 1. clone imagebuilder
 ```
@@ -135,7 +135,7 @@ $ ./gl_image -p ar750s
 ```
 
 ### Example 3
-Choose another tag to compile the version you want, such as the 3.025 ar750s firmware
+Choose another tag to compile the version you want, for example, the firmware of ar750s with version 3.025
 
 1. clone imagebuilder
 ```
@@ -168,59 +168,29 @@ $ ./gl_image -i -p ar750s
 ```
 
 **Oops! Failed to parse glinet/images.json**
-Warnning, If you encounter this error, don't panic. Please copy the corresponding version in the config directory to the glinet directory and run again.
+
+If you encounter this error, don't panic. Please copy the corresponding version in the config directory to the glinet directory and run again.
 
 ```
 $ cp config/images.json.3.025 glinet/images.json
 $ ./gl_image -i -p ar750s
 ```
 
-## Docker build environment ##
+## Build a custom ipk using imagebuilder
+1. The new download of the uncompiled imagebuilder code in the root directory did not generate **/imagebuilder/3.1/openwrt-imagebuilder-ar71xx-generic_3.1** directory structure, need to use `./gl_image -c custom.json -p <image_name>` to compile the source code once.
 
-You can also use a docker container as build environment.
-
-Install Docker to your system, here is how to do it for Ubuntu:
-
-```bash
-sudo apt install docker.io -y
-sudo systemctl start docker
-sudo systemctl enable docker
-```
-
-After cloning the Imagebuilder to your system as in the previous section, build the Docker image by running the following:
-
-```bash
-sudo docker build --rm -t gl_imagebuilder - < Dockerfile
-```
-
-To list all the possible device names:
-
-```bash
-sudo docker run -v "$(pwd)":/src gl_imagebuilder -l
-```
-
-And to make a firmware image for the **Mifi** with some extra packages included:
-
-```bash
-sudo docker run -v "$(pwd)":/src gl_imagebuilder -p mifi -e openssh-sftp-server nano htop
-```
-
-You'll find the compiled firmware image in *bin/gl-mifi/openwrt-mifi-ar71xx-generic-gl-mifi-squashfs-sysupgrade.bin*
-
-For other firmwares, the compiled firmware file is in **bin/<device_name>/**
-
-## How to build custom ipk with imagebuilder?
-1. The new download of the uncompiled imagebuilder code in the root directory did not generate */imagebuilder/3.1/openwrt-imagebuilder-ar71xx-generic_3.1* directory structure, need to use **./gl_image -c custom.json -p <image_name>** to compile the source code once.Then create the packages directory in the *gl_imagebuilder/imagebuilder/3.1/openwrt-imagebuilder-ar71xx-generic_3.1* directory and place the customized **ipk** in that directory, as shown below，I put in a **mylibndpi_2.8-1_mips_24kc.ipk**
+   Then create the **packages** directory in the **gl_imagebuilder/imagebuilder/3.1/openwrt-imagebuilder-ar71xx-generic_3.1** directory and place the customized **ipk** in that directory, as shown below，I put in a **mylibndpi_2.8-1_mips_24kc.ipk**
 
 ```
-linux@ubuntu:~/gl_imagebuilder/imagebuilder/3.1/openwrt-imagebuilder-ar71xx-generic_3.1$ ls packages/
+linux@ubuntu:~/gl_imagebuilder/imagebuilder/3.1/openwrt-imagebuilder-ar71xx-generic_3.1# ls packages/
 ```
-kernel_4.9.120-1-3b343e31a06aaa866bf90c839452ce76_mips_24kc.ipk  **mylibndpi_2.8-1_mips_24kc.ipk**
+```
+**mylibndpi_2.8-1_mips_24kc.ipk**
 libc_1.1.19-1_mips_24kc.ipk                                      Packages
 libconfig_1.5-1_mips_24kc.ipk                                    Packages.gz
 libjson-c_0.12.1-1_mips_24kc.ipk                                 uclibcxx_0.2.4-3_mips_24kc.ipk
 libpcap_1.8.1-1_mips_24kc.ipk
-
+```
 2.Modify the **customize.json** file.
 
 	"mifi": {
@@ -257,6 +227,39 @@ linux@ubuntu:~/gl_imagebuilder/imagebuilder/3.1/openwrt-imagebuilder-ar71xx-gene
 
 5.Completed in *gl_imagebuilder/bin/mifi/openwrt-mifi-3.027-0312_customize.bin*, find the bin file and installed to the routing.
 
+## Docker build environment ##
+
+You can also use a docker container as build environment.
+
+Install Docker to your system, here is how to do it for Ubuntu:
+
+```bash
+sudo apt install docker.io -y
+sudo systemctl start docker
+sudo systemctl enable docker
+```
+
+After cloning the Imagebuilder to your system as in the previous section, build the Docker image by running the following:
+
+```bash
+sudo docker build --rm -t gl_imagebuilder - < Dockerfile
+```
+
+To list all the possible device names:
+
+```bash
+sudo docker run -v "$(pwd)":/src gl_imagebuilder -l
+```
+
+And to make a firmware image for the **Mifi** with some extra packages included:
+
+```bash
+sudo docker run -v "$(pwd)":/src gl_imagebuilder -p mifi -e openssh-sftp-server nano htop
+```
+
+You'll find the compiled firmware image in *bin/gl-mifi/openwrt-mifi-ar71xx-generic-gl-mifi-squashfs-sysupgrade.bin*
+
+For other firmwares, the compiled firmware file is in **bin/<device_name>/**
 
 
 
