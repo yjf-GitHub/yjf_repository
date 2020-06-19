@@ -45,7 +45,7 @@ The Imagebuilder requires a "case sensitive" system, Windows is unfortunately no
 
 ## Usage ##
 
-**Basic usage**
+**1.Basic usage**
 
 You can list all the device names by running the following command.
 ```
@@ -64,20 +64,19 @@ To see more details and advanced options,run
 $ ./gl_image -h
 ```
 
-**Use your own configuration**
+**2.Use your own configuration**
 
-To use your own configuration, use the **customize.json** file. Make any changes and run the imagebuilder with the following command to run the custom configuration:
-
-**./gl_image -c customize.json -p <image_name>**
-
-**Add additional packages**
+To use your own configuration, use the **customize.json** file. Make any changes and run the command **./gl_image -c customize.json -p <image_name>** to build custom configured firmware.For example, build your custom configured firmware for the mifi:
+```
+$ ./gl_image -c customize.json -p mifi
+```
+**3.Add additional packages**
 
 For example, make an image for the **Mifi** with some [extra packages](https://openwrt.org/packages/start) included:
 
 ```bash
 ./gl_image -p mifi -e "openssh-sftp-server nano htop"
 ```
-
 You'll find the compiled firmware image in *bin/gl-mifi/openwrt-mifi-ar71xx-generic-gl-mifi-squashfs-sysupgrade.bin*
 
 For other firmwares, the compiled firmware file is in **bin/<device_name>/**
