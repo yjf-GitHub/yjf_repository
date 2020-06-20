@@ -181,9 +181,9 @@ $ ./gl_image -i -p ar750s
 
 **Add ipk packages**
 
-1. The new download of the uncompiled imagebuilder code in the root directory did not generate **/imagebuilder/3.1/openwrt-imagebuilder-ar71xx-generic_3.1** directory structure, need to use **./gl_image -c custom.json -p <image_name>** to compile the source code once.
+1.The new download of the uncompiled imagebuilder code in the root directory did not generate **/imagebuilder/3.1/openwrt-imagebuilder-ar71xx-generic_3.1** directory structure, need to use **./gl_image -c custom.json -p <image_name>** to compile the source code once.
 
-   Then create the **packages** directory in the **gl_imagebuilder/imagebuilder/3.1/openwrt-imagebuilder-ar71xx-generic_3.1** directory and place the customized **ipk** in that directory, as shown below，I put in a **helloworld_1.0_mips_24kc.ipk**
+  Then create the **packages** directory in the **gl_imagebuilder/imagebuilder/3.1/openwrt-imagebuilder-ar71xx-generic_3.1** directory and place the customized **ipk** in that directory, as shown below，I put in a **helloworld_1.0_mips_24kc.ipk**
 
 ```
 linux@ubuntu:~/gl_imagebuilder/imagebuilder/3.1/openwrt-imagebuilder-ar71xx-generic_3.1# ls packages/
@@ -196,7 +196,7 @@ libc_1.1.19-1_mips_24kc.ipk                                      Packages.gz
 ..............
 ..............
 ```
-2. Modify the **customize.json** file.
+2.Modify the **customize.json** file.
 
 	"mifi": {
 			"profile": "gl-mifi",
@@ -208,7 +208,7 @@ libc_1.1.19-1_mips_24kc.ipk                                      Packages.gz
 
 ----------
 **Set files properties**
-1. If you want to compile your own **/etc/init.d/gl_init** files or **/www** folders, you need to specify the files properties.Then create the files directory in the **gl_imagebuilder/imagebuilder/3.1/openwrt-imagebuilder-ar71xx-generic_3.1** directory.
+1.If you want to compile your own **/etc/init.d/gl_init** files or **/www** folders, you need to specify the files properties.Then create the files directory in the **gl_imagebuilder/imagebuilder/3.1/openwrt-imagebuilder-ar71xx-generic_3.1** directory.
    
    The modified **/etc/init.d/gl_init** file, according to the folder directory structure put into the **gl_imagebuilder/imagebuilder/3.1/openwrt-imagebuilder-ar71xx-generic_3.1/files** directory.
    
@@ -219,7 +219,7 @@ linux@ubuntu:~/gl_imagebuilder/imagebuilder/3.1/openwrt-imagebuilder-ar71xx-gene
 ```
 **etc  www**
 ```
-2. Modify the **customize.json** file.
+2.Modify the **customize.json** file.
 
 	"mifi": {
 			"profile": "gl-mifi",
