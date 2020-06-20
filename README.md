@@ -178,6 +178,7 @@ $ ./gl_image -i -p ar750s
 
 # Build a custom ipk using imagebuilder
 ##Basic configuration
+
 **Add ipk packages**
 
 1. The new download of the uncompiled imagebuilder code in the root directory did not generate **/imagebuilder/3.1/openwrt-imagebuilder-ar71xx-generic_3.1** directory structure, need to use **./gl_image -c custom.json -p <image_name>** to compile the source code once.
@@ -204,6 +205,7 @@ libc_1.1.19-1_mips_24kc.ipk                                      Packages.gz
 			"packages": "gl-base-files-ar $basic $vpn $storage $glinet $usb -wpa-cli -kmod-rt2800-usb **helloworld**"
 
 		}
+
 ----------
 **Set files properties**
 1. If you want to compile your own **/etc/init.d/gl_init** files or **/www** folders, you need to specify the files properties.Then create the files directory in the **gl_imagebuilder/imagebuilder/3.1/openwrt-imagebuilder-ar71xx-generic_3.1** directory.
@@ -218,6 +220,7 @@ linux@ubuntu:~/gl_imagebuilder/imagebuilder/3.1/openwrt-imagebuilder-ar71xx-gene
 **etc  www**
 ```
 2. Modify the **customize.json** file.
+
 	"mifi": {
 			"profile": "gl-mifi",
 			"version": "3.027",
