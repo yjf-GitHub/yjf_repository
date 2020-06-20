@@ -261,20 +261,23 @@ We want to create a clean customized firmware for our mifi device that includes 
 ```
 linux@ubuntu:~/gl_imagebuilder# cat myfirst.json
 
+{
+	"profiles":
 	{
-		"profiles":
+	    "helloworld":
 		{
-		    "helloworld":
-			{
-		        "profile": "gl-mifi",
-		        "version": "3.027",
-		        "imagebuilder": "3.1/openwrt-imagebuilder-ar71xx-generic_3.1",
-		        "packages": "luci helloworld"
-		    }
-		}
+	        "profile": "gl-mifi",
+	        "version": "3.027",
+	        "imagebuilder": "3.1/openwrt-imagebuilder-ar71xx-generic_3.1",
+	        "packages": "luci helloworld"
+	    }
 	}
+}
+
+```
 
 Placing the helloworld.ipk in the glinet/ar71xx folder and running **./gl_image -c myfirst.json -p helloworld** will build our clean image with our helloworld.ipk included.
+
 # Docker build environment 
 
 You can also use a docker container as build environment.
