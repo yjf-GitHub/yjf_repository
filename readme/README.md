@@ -52,7 +52,7 @@ All available target list:
 ```
 
 # Compiling
-## (1) GL.iNet Util compilation method
+## 1.GL.iNet Util compilation method
 
 We provide a script to compile all software packages with all targets SDK or compile all software packages with a single target SDK. You are freely and quickly compile packages for each platform.
 
@@ -85,29 +85,29 @@ Or run the following command to compile packages for all platform,
 $ ./builder.sh -d [packages_path] -a
 ```
 
-## Demo: Compile the hello_world package for AR750
+**Demo: Compile the helloworld package for AR750**
 
-1.Enter the SDK directory of clone GL.iNet and download the SDK of corresponding platform of AR750
+1.Enter the sdk directory of clone GL.iNet and download the sdk of corresponding platform of AR750
 ```
 $ cd sdk
 $ ./download.sh ar71xx-1806
 ```
 
-2.Compile the `example/hello_world` package for the ar71xx-1806 package.The compiled packages will be located in the `sdk/1806/ar71xx/bin/packages/mips_24kc/base` folder
+2.Compile the helloworld package for the ar71xx-1806 platform.The compiled packages will be located in the `sdk/1806/ar71xx/bin/packages/mips_24kc/base` folder
 ```
-$ ./builder.sh -d example/hello_world -t ar71xx-1806
+$ ./builder.sh -d example/helloworld -t ar71xx-1806
 ```
 
-1.If you want to compile the hello_world package for all platforms, enter the following command
+1.If you want to compile the helloworld package for all platforms, enter the following command
 ```
-$ ./builder.sh -d example/hello_world -a
+$ ./builder.sh -d example/helloworld -a
 ```
 
 2.Compiling packages for all platforms for the first time is slow,so it can be done in steps.  
 
-Use `./builder.sh [option]` to download the SDKS for all platforms. Execute again `./builder.sh -d [packages_path] -a`
+Use `./builder.sh [option]` to download the sdks for all platforms. Execute again `./builder.sh -d [packages_path] -a`
 
-## (2) Official compilation method
+## 2.Official compilation method
 
 1.Place your package in `sdk/<version>/<target>/package/`, then run:
 
@@ -116,11 +116,11 @@ $ cd sdk/<version>/<target>/
 $ make package/<package_name>/compile V=s
 ```
 
-2.For example, to compile the hello_world package for the `ar71xx` target, it will look like this:
+2.For example, to compile the helloworld package for the `ar71xx` target, it will look like this:
 The compiled package will be in the `sdk/<version>/<target>/bin/` folder
 ```
 $ cd sdk/1806/ar71xx
-$ make package/hello_world/{clean,compile} V=s
+$ make package/helloworld/{clean,compile} V=s
 ```
 
 # Installing
@@ -135,9 +135,9 @@ $ opkg install <package_name>.ipk
 ```
 Will install the package on the device without internet. 
 
-After the hello_world package above is installed successfully, run the following command
+After the helloworld package above is installed successfully, run the following command
 ```
-$ /mnt/hello_world
+$ /mnt/helloworld
 ```
 This will appear on the screen as follows.
 ```
