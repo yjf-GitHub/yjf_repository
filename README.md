@@ -1,8 +1,8 @@
-# Imagebuilder #
+# Imagebuilder 
 
 Imagebuilder for GL.iNet devices. The Imagebuilder (previously called the Image Generator) is a pre-compiled environment suitable for creating custom images without having to compile the entire OpenWRT build environment.
 
-## Introduction ##
+## Introduction 
 
 As the old imagebuilder repository gets bigger and bigger, it makes it harder to download and use. Because of this we have improved the imagebuilder code. It is smaller and faster than before, however, executing 'git pull' under the old imagebuilder will conflict, so please clone the new imagebuilder to a new directory or delete the old one. The old imagebuilder has been moved to https://github.com/gl-inet/imagebuilder_archive.
 
@@ -12,7 +12,7 @@ The companion https://github.com/gl-inet/glinet repository is downloaded automat
 git clone --depth=1 https://github.com/gl-inet/imagebuilder gl_imagebuilder
 ```
 
-## System requirements ##
+## System requirements 
 
 - x86_64 platform
 - Ubuntu or another linux distro
@@ -21,7 +21,7 @@ Running Imagebuilder under Windows can be done using the Windows Subsystem For L
 
 https://docs.microsoft.com/en-us/windows/wsl/install-win10
 
-## Preparing your build environment ##
+## Preparing your build environment 
 
 To use the Imagebuilder on your system will usually require you to install some extra packages.
 
@@ -32,7 +32,7 @@ sudo apt update && sudo apt upgrade -y
 sudo apt install device-tree-compiler gawk gcc git g++ make ncurses-dev python unzip -y
 ```
 
-## Clone the Imagebuilder to your system ##
+## Clone the Imagebuilder to your system 
 
 ```bash
 git clone https://github.com/gl-inet/imagebuilder gl_imagebuilder
@@ -43,9 +43,9 @@ cd gl_imagebuilder
 
 The Imagebuilder requires a "case sensitive" system, Windows is unfortunately not. To run the Imagebuilder in WSL you **MUST** clone the repo to the linux folder tree, ie: ```/home/<username>/``` or any other folder you choose. This is required, you **CAN NOT** run it from ```/mnt/c/``` or any other windows native drive mounted in WSL. Running the Imagebuilder from a Windows mounted disk will result in a failed build with cryptic messages.
 
-## Usage ##
+# Usage 
 
-**1.Basic usage**
+## 1.Basic usage 
 
 You can list all the device names by running the following command.
 ```
@@ -64,13 +64,13 @@ To see more details and advanced options,run
 $ ./gl_image -h
 ```
 
-**2.Use your own configuration**
+## 2.Use your own configuration 
 
 To use your own configuration, use the **customize.json** file. Make any changes and run the command **./gl_image -c customize.json -p <image_name>** to build custom configured firmware.For example, build your custom configured firmware for the mifi:
 ```
 $ ./gl_image -c customize.json -p mifi
 ```
-**3.Add additional packages**
+## 3.Add additional packages 
 
 For example, make an image for the **mifi** with some [extra packages](https://openwrt.org/packages/start) included:
 
@@ -81,11 +81,11 @@ You'll find the compiled firmware image in *bin/gl-mifi/openwrt-mifi-ar71xx-gene
 
 For other firmwares, the compiled firmware file is in **bin/<device_name>/**
 
-## Compile stable firmware based on GL.iNet.
+# Compile stable firmware based on GL.iNet. 
 
 Make sure you have compiled it once. It will automatically download the specified imagebuilder and glinet repository. 
 
-### Example 1
+## Example 1
 Select the GL.iNet standard firmware that you want to make,such as the mifi
 
 1. clone imagebuilder
@@ -105,7 +105,7 @@ $ git clone https://github.com/gl-inet/glinet.git
 $ ./gl_image -p mifi
 ```
 
-### Example 2
+## Example 2
 Select another branch to compile,such as ar750s branch
 
 1. clone imagebuilder
@@ -134,7 +134,7 @@ $ cd ../
 $ ./gl_image -p ar750s
 ```
 
-### Example 3
+## Example 3
 Choose another tag to compile the version you want, for example, the firmware of ar750s with version 3.025
 
 1. clone imagebuilder
@@ -176,7 +176,7 @@ $ cp config/images.json.3.025 glinet/images.json
 $ ./gl_image -i -p ar750s
 ```
 
-## Build a custom ipk using imagebuilder
+# Build a custom ipk using imagebuilder
 1. The new download of the uncompiled imagebuilder code in the root directory did not generate **/imagebuilder/3.1/openwrt-imagebuilder-ar71xx-generic_3.1** directory structure, need to use `./gl_image -c custom.json -p <image_name>` to compile the source code once.
 
    Then create the **packages** directory in the **gl_imagebuilder/imagebuilder/3.1/openwrt-imagebuilder-ar71xx-generic_3.1** directory and place the customized **ipk** in that directory, as shown below，I put in a **mylibndpi_2.8-1_mips_24kc.ipk**
@@ -227,7 +227,7 @@ linux@ubuntu:~/gl_imagebuilder/imagebuilder/3.1/openwrt-imagebuilder-ar71xx-gene
 
 5.Completed in *gl_imagebuilder/bin/mifi/openwrt-mifi-3.027-0312_customize.bin*, find the bin file and installed to the routing.
 
-## Docker build environment ##
+# Docker build environment 
 
 You can also use a docker container as build environment.
 
