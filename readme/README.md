@@ -2,7 +2,7 @@
 
 OpenWRT SDK for GL.iNet devices. The OpenWRT SDK is a pre-compiled environment suitable for creating custom packages without having to compile the entire OpenWRT build environment. 
 
-Because this is reduced to compile packages for you quickly, only application-level packages can be compiled, not kernal-related packages.
+Because this is a simplified compilation environment, the purpose is to compile the package quickly.So you can only compile application-level packages, not kernel-related packages.
   ![:!:](https://openwrt.org/lib/images/smileys/icon_exclaim.gif) Do everything as normal user, don't use root user or sudo!
 
   ![:!:](https://openwrt.org/lib/images/smileys/icon_exclaim.gif) Do not build in a directory that has spaces in its full path 
