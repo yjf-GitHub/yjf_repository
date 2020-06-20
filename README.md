@@ -177,47 +177,53 @@ $ ./gl_image -i -p ar750s
 ```
 
 # Build a custom ipk using imagebuilder
-1. The new download of the uncompiled imagebuilder code in the root directory did not generate **/imagebuilder/3.1/openwrt-imagebuilder-ar71xx-generic_3.1** directory structure, need to use `./gl_image -c custom.json -p <image_name>` to compile the source code once.
+##Basic configuration
+**Add ipk packages**
 
-   Then create the **packages** directory in the **gl_imagebuilder/imagebuilder/3.1/openwrt-imagebuilder-ar71xx-generic_3.1** directory and place the customized **ipk** in that directory, as shown below，I put in a **mylibndpi_2.8-1_mips_24kc.ipk**
+1. The new download of the uncompiled imagebuilder code in the root directory did not generate **/imagebuilder/3.1/openwrt-imagebuilder-ar71xx-generic_3.1** directory structure, need to use **./gl_image -c custom.json -p <image_name>** to compile the source code once.
+
+   Then create the **packages** directory in the **gl_imagebuilder/imagebuilder/3.1/openwrt-imagebuilder-ar71xx-generic_3.1** directory and place the customized **ipk** in that directory, as shown below，I put in a **helloworld_1.0_mips_24kc.ipk**
 
 ```
 linux@ubuntu:~/gl_imagebuilder/imagebuilder/3.1/openwrt-imagebuilder-ar71xx-generic_3.1# ls packages/
 ```
 ```
-**mylibndpi_2.8-1_mips_24kc.ipk**
-libc_1.1.19-1_mips_24kc.ipk                                      Packages
-libconfig_1.5-1_mips_24kc.ipk                                    Packages.gz
-libjson-c_0.12.1-1_mips_24kc.ipk                                 uclibcxx_0.2.4-3_mips_24kc.ipk
-libpcap_1.8.1-1_mips_24kc.ipk
+..............
+..............
+**helloworld_1.0_mips_24kc.ipk**                                 Packages 
+libc_1.1.19-1_mips_24kc.ipk                                      Packages.gz
+..............
+..............
 ```
-2.Modify the **customize.json** file.
+2. Modify the **customize.json** file.
 
 	"mifi": {
 			"profile": "gl-mifi",
 			"version": "3.027",
 			"imagebuilder": "3.1/openwrt-imagebuilder-ar71xx-generic_3.1",
-			"packages": "gl-base-files-ar $basic $vpn $storage $glinet $usb -wpa-cli -kmod-rt2800-usb mylibndpi"
+			"packages": "gl-base-files-ar $basic $vpn $storage $glinet $usb -wpa-cli -kmod-rt2800-usb **helloworld**"
 
 		}
-
-Just package the **ipk** file without setting the files property.
-
 ----------
-
-If you want to compile your own /etc/init.d/gl_init files or /www folders, you need to specify the files properties.Then create the files directory in the *gl_imagebuilder/imagebuilder/3.1/openwrt-imagebuilder-ar71xx-generic_3.1* directory.The modified */etc/init.d/gl_init* file, according to the folder directory structure put into the *gl_imagebuilder/imagebuilder/3.1/openwrt-imagebuilder-ar71xx-generic_3.1/files* directory.The modified */www* folder is also placed in the files directory. As shown below.
+**Set files properties**
+1. If you want to compile your own **/etc/init.d/gl_init** files or **/www** folders, you need to specify the files properties.Then create the files directory in the **gl_imagebuilder/imagebuilder/3.1/openwrt-imagebuilder-ar71xx-generic_3.1** directory.
+   
+   The modified **/etc/init.d/gl_init** file, according to the folder directory structure put into the **gl_imagebuilder/imagebuilder/3.1/openwrt-imagebuilder-ar71xx-generic_3.1/files** directory.
+   
+   The modified */www* folder is also placed in the files directory. As shown below.
 ```
 linux@ubuntu:~/gl_imagebuilder/imagebuilder/3.1/openwrt-imagebuilder-ar71xx-generic_3.1/files$ ls
 ```
-
+```
 **etc  www**
-
+```
+2. Modify the **customize.json** file.
 	"mifi": {
 			"profile": "gl-mifi",
 			"version": "3.027",
 			"imagebuilder": "3.1/openwrt-imagebuilder-ar71xx-generic_3.1",
 			"packages": "gl-base-files-ar $basic $vpn $storage $glinet $usb -wpa-cli -kmod-rt2800-usb mylibndpi",
-		        "files": "imagebuilder/3.1/openwrt-imagebuilder-ar71xx-generic_3.1/files"
+		  **"files": "imagebuilder/3.1/openwrt-imagebuilder-ar71xx-generic_3.1/files"**
 		}
 
 ----------
@@ -226,6 +232,8 @@ linux@ubuntu:~/gl_imagebuilder/imagebuilder/3.1/openwrt-imagebuilder-ar71xx-gene
 4.Compile the code with **./gl_image -c custom.json -p mifi**
 
 5.Completed in *gl_imagebuilder/bin/mifi/openwrt-mifi-3.027-0312_customize.bin*, find the bin file and installed to the routing.
+
+## Advanced configuration
 
 # Docker build environment 
 
