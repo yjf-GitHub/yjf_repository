@@ -2,6 +2,7 @@
 
 OpenWRT SDK for GL.iNet devices. The OpenWRT SDK is a pre-compiled environment suitable for creating custom packages without having to compile the entire OpenWRT build environment. 
 
+Because this is reduced to compile packages for you quickly, only application-level packages can be compiled, not kernal-related packages.
   ![:!:](https://openwrt.org/lib/images/smileys/icon_exclaim.gif) Do everything as normal user, don't use root user or sudo!
 
   ![:!:](https://openwrt.org/lib/images/smileys/icon_exclaim.gif) Do not build in a directory that has spaces in its full path 
@@ -52,7 +53,7 @@ All available target list:
 ```
 
 # Compiling
-## 1.GL.iNet Util compilation method
+## 1. GL.iNet Util compilation method
 
 We provide a script to compile all software packages with all targets SDK or compile all software packages with a single target SDK. You are freely and quickly compile packages for each platform.
 
@@ -107,7 +108,7 @@ $ ./builder.sh -d example/helloworld -a
 
 Use `./builder.sh [option]` to download the sdks for all platforms. Execute again `./builder.sh -d [packages_path] -a`
 
-## 2.Official compilation method
+## 2. Official compilation method
 
 1.Place your package in `sdk/<version>/<target>/package/`, then run:
 
@@ -196,3 +197,4 @@ And read about the OpenWRT package structure here:
 ```
 
 https://openwrt.org/docs/guide-developer/packages
+
