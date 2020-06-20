@@ -178,7 +178,7 @@ $ ./gl_image -i -p ar750s
 
 # Build a custom ipk using imagebuilder
 
-You can go to the link https://github.com/gl-inet/sdk according to the instructions to compile helloworld.ipk. Use this package for imageBuilder test.Or build firmware using your own software package that mimics the steps below.
+You can go to the link https://github.com/gl-inet/sdk according to the instructions to compile helloworld.ipk. Use this package for imagebuilder test.Or use your own ipk and emulate the following steps to build the firmware.
 
 ## Basic configuration
 
@@ -226,8 +226,8 @@ etc  www
 			"profile": "gl-mifi",
 			"version": "3.027",
 			"imagebuilder": "3.1/openwrt-imagebuilder-ar71xx-generic_3.1",
-			"packages": "gl-base-files-ar $basic $vpn $storage $glinet $usb -wpa-cli -kmod-rt2800-usb mylibndpi",
-		    "files": "imagebuilder/3.1/openwrt-imagebuilder-ar71xx-generic_3.1/files"
+			"packages": "gl-base-files-ar $basic $vpn $storage $glinet $usb -wpa-cli -kmod-rt2800-usb helloworld",
+			"files": "imagebuilder/3.1/openwrt-imagebuilder-ar71xx-generic_3.1/files"
 		}
 
 ----------
