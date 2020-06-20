@@ -177,6 +177,9 @@ $ ./gl_image -i -p ar750s
 ```
 
 # Build a custom ipk using imagebuilder
+
+You can go to the link https://github.com/gl-inet/sdk according to the instructions to compile helloworld.ipk. Use this package for imageBuilder test.Or build firmware using your own software package that mimics the steps below.
+
 ## Basic configuration
 
 **Add ipk packages**
@@ -187,8 +190,7 @@ $ ./gl_image -i -p ar750s
 
 ```
 linux@ubuntu:~/gl_imagebuilder/imagebuilder/3.1/openwrt-imagebuilder-ar71xx-generic_3.1# ls packages/
-```
-```
+
 ..............
 ..............
 **helloworld_1.0_mips_24kc.ipk**                                 Packages 
@@ -207,6 +209,7 @@ libc_1.1.19-1_mips_24kc.ipk                                      Packages.gz
 
 ----------
 **Set files properties**
+
 1.If you want to compile your own **/etc/init.d/gl_init** files or **/www** folders, you need to specify the files properties.Then create the files directory in the **gl_imagebuilder/imagebuilder/3.1/openwrt-imagebuilder-ar71xx-generic_3.1** directory.
    
   The modified **/etc/init.d/gl_init** file, according to the folder directory structure put into the **gl_imagebuilder/imagebuilder/3.1/openwrt-imagebuilder-ar71xx-generic_3.1/files** directory.
@@ -214,8 +217,7 @@ libc_1.1.19-1_mips_24kc.ipk                                      Packages.gz
    The modified */www* folder is also placed in the files directory. As shown below.
 ```
 linux@ubuntu:~/gl_imagebuilder/imagebuilder/3.1/openwrt-imagebuilder-ar71xx-generic_3.1/files$ ls
-```
-```
+
 etc  www
 ```
 2.Modify the **customize.json** file.
@@ -237,6 +239,42 @@ etc  www
 
 ## Advanced configuration
 
+All the GL device package configuration is done with the **images.json** file. The following 
+
+	packages: The default packages included in all firmwares
+	profiles: Configuration for each firmware
+	{
+		<image_name>:
+		{
+		    profile: The name of the device. Run "make info" for a list of available devices.
+		    version: Firmware version. Generates a version file called /etc/glversion and overrides /etc/opk/distfeeds.conf with the version number
+		    imagebuilder: Image builder folder
+		    packages: Packages in the firmware. Variables include the default packages. Add the package name to include. "-" appended to the package name excludes the package, eg: "-mwan3"
+		    files: Files folder, it allows customized configuration files to be included in images built with Image Generator, all files from the folder will be copied into device's rootfs("/").
+		}
+	}
+
+**Example**
+
+We want to create a clean customized firmware for our mifi device that includes **helloworld.ipk**, here is an example of a user-defined configuration file. We name it **myfirst.json**:	
+
+```
+linux@ubuntu:~/gl_imagebuilder# cat myfirst.json
+
+	{
+		"profiles":
+		{
+		    "helloworld":
+			{
+		        "profile": "gl-mifi",
+		        "version": "3.027",
+		        "imagebuilder": "3.1/openwrt-imagebuilder-ar71xx-generic_3.1",
+		        "packages": "luci helloworld"
+		    }
+		}
+	}
+
+Placing the helloworld.ipk in the glinet/ar71xx folder and running **./gl_image -c myfirst.json -p helloworld** will build our clean image with our helloworld.ipk included.
 # Docker build environment 
 
 You can also use a docker container as build environment.
