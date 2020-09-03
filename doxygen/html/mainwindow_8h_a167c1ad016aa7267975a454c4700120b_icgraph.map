@@ -1,6 +1,0 @@
-<map id="GetPortInfo" name="GetPortInfo">
-<area shape="rect" id="node2" href="$classgetthread.html#ae9be116600f6de1e14693bed96e33467" title="线程运行函数，检测是否开关机UPS，发送串口获取UPS状态数据及接收串口返回数据 " alt="" coords="173,5,276,32"/>
-<area shape="rect" id="node3" href="$class_port_dialog.html#ac333591cc4f342137add4095b39904db" title="串口和协议填充界面 " alt="" coords="140,56,309,83"/>
-<area shape="rect" id="node5" href="$class_port_dialog.html#a92d318f4fc846702ea9f68adf674659b" title="确认按钮 " alt="" coords="149,107,301,149"/>
-<area shape="rect" id="node4" href="$class_port_dialog.html#ae9170ab6ce6166773f95601f76e81fbc" title="构造函数 " alt="" coords="357,85,508,112"/>
-</map>

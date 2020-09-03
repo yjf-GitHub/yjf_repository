@@ -1,5 +1,0 @@
-<map id="类继承关系图" name="类继承关系图">
-<area shape="rect" id="node1" href="$class_component.html" title="Component" alt="" coords="5,5,93,32"/>
-<area shape="rect" id="node2" href="$class_q_biao_pan.html" title="QBiaoPan" alt="" coords="150,5,231,32"/>
-<area shape="rect" id="node3" href="$class_q_big_biaopan.html" title="QBigBiaopan" alt="" coords="141,56,240,83"/>
-</map>

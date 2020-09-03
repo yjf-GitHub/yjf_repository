@@ -1,6 +1,0 @@
-<map id="getthread::run" name="getthread::run">
-<area shape="rect" id="node2" href="$mainwindow_8cpp.html#a167c1ad016aa7267975a454c4700120b" title="获取串口配置 " alt="" coords="180,5,267,32"/>
-<area shape="rect" id="node3" href="$class_q_my_settings.html#a9cadff7acc3bbb325b00c6d581e0a34b" title="读取配置文件数据并解密 " alt="" coords="156,56,291,83"/>
-<area shape="rect" id="node4" href="$class_q_my_settings.html#a626dee750fbb1cbd0f23995e73d4abc3" title="解密函数 " alt="" coords="339,56,489,83"/>
-<area shape="rect" id="node5" href="$class_q_my_settings.html#a564f7162cb3680166629580268ec0702" title="加解密方法 " alt="" coords="537,49,725,90"/>
-</map>
