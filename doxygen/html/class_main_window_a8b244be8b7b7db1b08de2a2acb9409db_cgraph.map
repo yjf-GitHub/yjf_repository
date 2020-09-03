@@ -1,0 +1,25 @@
+<map id="MainWindow::MainWindow" name="MainWindow::MainWindow">
+<area shape="rect" id="node2" href="$class_q_my_settings.html#a9cadff7acc3bbb325b00c6d581e0a34b" title="读取配置文件数据并解密 " alt="" coords="765,71,899,97"/>
+<area shape="rect" id="node5" href="$class_main_window.html#a9a79bdb75d371d7733fb0d5851acdabc" title="系统托盘 " alt="" coords="241,217,417,258"/>
+<area shape="rect" id="node6" href="$class_main_window.html#a139a197f8a3a5595b1159c258df97af9" title="接收串口数据并解析数据（UPS标准协议） " alt="" coords="250,283,409,309"/>
+<area shape="rect" id="node7" href="$class_main_window.html#ab3c3e6f7193e26414634cb2da59df8aa" title="接收串口数据并解析数据（APC smart协议） " alt="" coords="233,333,426,360"/>
+<area shape="rect" id="node8" href="$class_main_window.html#ab5bd297eae7502c53c1113f354a49674" title="端口错误信号槽，弹出错误警告 " alt="" coords="235,384,423,411"/>
+<area shape="rect" id="node9" href="$class_main_window.html#adc1ecb4c86f4a73116216e760b6830f1" title="主界面状态更新函数 " alt="" coords="232,441,427,468"/>
+<area shape="rect" id="node20" href="$class_main_window.html#a6f593bb60a08b08e62865970075f45b2" title="每秒更新一次，检测当前时间是否与设置开关机时间相等 " alt="" coords="242,64,417,91"/>
+<area shape="rect" id="node22" href="$class_q_my_settings.html#a4e4d0b707ca4cff7c0287e91371ad555" title="判断ini文件是否存在 " alt="" coords="249,115,410,141"/>
+<area shape="rect" id="node23" href="$class_q_my_settings.html#a8f1323aa517ba2fbeaf1c00ca282a3a6" title="设置配置文件加密数据 " alt="" coords="251,165,408,192"/>
+<area shape="rect" id="node3" href="$class_q_my_settings.html#a626dee750fbb1cbd0f23995e73d4abc3" title="解密函数 " alt="" coords="965,77,1116,104"/>
+<area shape="rect" id="node4" href="$class_q_my_settings.html#a564f7162cb3680166629580268ec0702" title="加解密方法 " alt="" coords="1164,107,1352,149"/>
+<area shape="rect" id="node10" href="$class_main_window.html#a4b82759588f7f94c6a813a4fbdfa9f02" title="运行状态发送变化 " alt="" coords="479,216,695,243"/>
+<area shape="rect" id="node11" href="$class_main_window.html#a9eb0cf2496f04a77e0910d61a719e66d" title="输入电压发送变化 " alt="" coords="497,267,676,309"/>
+<area shape="rect" id="node12" href="$class_main_window.html#a31df62c8fa55a1f271cc3f381f72ea7f" title="输出电压发送变化 " alt="" coords="517,333,657,374"/>
+<area shape="rect" id="node13" href="$class_main_window.html#a6d788a450722bf77e7075afd057ea952" title="电池容量发送变化 " alt="" coords="489,399,684,425"/>
+<area shape="rect" id="node14" href="$class_main_window.html#a9ecd47cfa9b8dd34060e2cd7fc9baab2" title="负载发送变化 " alt="" coords="495,449,678,476"/>
+<area shape="rect" id="node15" href="$class_main_window.html#aa38dde83c66d5813dc84bd8d5d43c464" title="电池温度发送变化 " alt="" coords="475,500,699,527"/>
+<area shape="rect" id="node16" href="$class_main_window.html#a4ebd6f90e7198752bbc04b27a109fa31" title="当前供电类型发送变化 " alt="" coords="489,551,685,593"/>
+<area shape="rect" id="node18" href="$class_main_window.html#a6b29548c1f974dd2dcf786906417697a" title="在线断线发生变化 " alt="" coords="491,617,683,644"/>
+<area shape="rect" id="node19" href="$class_main_window.html#a4721f0ce65365b67e4d596d56872ff7d" title="执行动作，执行程序关机或者以休眠计算机代替关闭系统。关闭系统前，执行指定应用程序。 ..." alt="" coords="487,668,686,695"/>
+<area shape="rect" id="node17" href="$class_q_tool_tips.html#a5f228784446972f1f75dbda54d16ffc0" title="显示右下角提示框信息 " alt="" coords="747,559,917,585"/>
+<area shape="rect" id="node21" href="$class_main_window.html#a78539d4666fb43b185e26afe3158f7fa" title="更新时间表 " alt="" coords="501,64,673,91"/>
+<area shape="rect" id="node24" href="$class_q_my_settings.html#a5914d92eeab0683d4dc0734530ba6d1e" title="加密函数 " alt="" coords="965,140,1116,167"/>
+</map>

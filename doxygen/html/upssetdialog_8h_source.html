@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.10"/>
+<title>GtUPSMate: upssetdialog.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">GtUPSMate
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.10 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li><a href="annotated.html"><span>结构体</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>全局定义</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">upssetdialog.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="upssetdialog_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#ifndef UPSSETDIALOG_H</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#define UPSSETDIALOG_H</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;QDialog&gt;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;QFileInfo&gt;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;QFileDialog&gt;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="qmysetting_8h.html">qmysetting.h</a>&quot;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;QDebug&gt;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_ui.html">Ui</a> {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">class </span><a class="code" href="class_u_p_s_set_dialog.html">UPSSetDialog</a>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;}</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="class_u_p_s_set_dialog.html">   29</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_u_p_s_set_dialog.html">UPSSetDialog</a> : <span class="keyword">public</span> QDialog</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;{</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    Q_OBJECT</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="class_u_p_s_set_dialog.html#a55c99a5c088ffc83169c7e376e4f5141">UPSSetDialog</a>(QWidget *parent = 0);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="class_u_p_s_set_dialog.html#a1e193e56594c3fb6240e7529c63255eb">~UPSSetDialog</a>();</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="class_u_p_s_set_dialog.html#a77f2d73ee449283cf5fe16a39962d3fd">   36</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_u_p_s_set_dialog.html#a77f2d73ee449283cf5fe16a39962d3fd">PowerLow</a>;<span class="comment">//电池电量低</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="class_u_p_s_set_dialog.html#aef8aae13590f996fe8c81dd1828cbbae">   37</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_u_p_s_set_dialog.html#aef8aae13590f996fe8c81dd1828cbbae">SPowerLow</a>;<span class="comment">//电池电量低严重</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="class_u_p_s_set_dialog.html#a5db556c5733f0d603e66d740f24e493d">   38</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_u_p_s_set_dialog.html#a5db556c5733f0d603e66d740f24e493d">PowerLowValue</a>;<span class="comment">//电池电量低值</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="class_u_p_s_set_dialog.html#af14c3182842cced48a267aa21eea362e">   39</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_u_p_s_set_dialog.html#af14c3182842cced48a267aa21eea362e">SPowerLowValue</a>;<span class="comment">//电池电量低严重值</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="class_u_p_s_set_dialog.html#afefcbe466243c399eefd9436415d15c4">   40</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_u_p_s_set_dialog.html#afefcbe466243c399eefd9436415d15c4">Shutdown</a>;<span class="comment">//电池电量低关机</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="class_u_p_s_set_dialog.html#ab8dbd205915cae03b521f6047503e10a">   41</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_u_p_s_set_dialog.html#ab8dbd205915cae03b521f6047503e10a">SShutdown</a>;<span class="comment">//电池电量低严重关机</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="class_u_p_s_set_dialog.html#a2f90c3892d6d297576205844269bbb0f">   42</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_u_p_s_set_dialog.html#a2f90c3892d6d297576205844269bbb0f">Sleep</a>;<span class="comment">//电池电量低休眠</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="class_u_p_s_set_dialog.html#a70ba931772911240c509f271cabe8e85">   43</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_u_p_s_set_dialog.html#a70ba931772911240c509f271cabe8e85">SSleep</a>;<span class="comment">//电池电量低严重休眠</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="class_u_p_s_set_dialog.html#aa9e856192e864177a8efd18e9e7a573e">   44</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_u_p_s_set_dialog.html#aa9e856192e864177a8efd18e9e7a573e">EXE</a>;<span class="comment">//电池电量低执行程序</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="class_u_p_s_set_dialog.html#a8cbe49ac85dd9459dc951e19e0dba61f">   45</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_u_p_s_set_dialog.html#a8cbe49ac85dd9459dc951e19e0dba61f">SEXE</a>;<span class="comment">//电池电量低严重执行程序</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="class_u_p_s_set_dialog.html#adf5ad92713763033856147cac64df97f">   46</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_u_p_s_set_dialog.html#adf5ad92713763033856147cac64df97f">Log</a>;<span class="comment">//日志开关</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="class_u_p_s_set_dialog.html#ae56ec928b92c2112cab77fe076e82888">   47</a></span>&#160;    QString <a class="code" href="class_u_p_s_set_dialog.html#a6e3126536ab663a9e6d5caa7f52b6f9d">file_full</a>,<a class="code" href="class_u_p_s_set_dialog.html#a839f9e022dc8a0ea5ccf72c6f3950287">file_name</a>,<a class="code" href="class_u_p_s_set_dialog.html#a57b67652fbfec00b5b79b3c4922a7721">file_path</a>,<a class="code" href="class_u_p_s_set_dialog.html#ae56ec928b92c2112cab77fe076e82888">full_name</a>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="class_u_p_s_set_dialog.html#a05bc9df52b26fa5e378b7fd78377a7d4">   48</a></span>&#160;    QString <a class="code" href="class_u_p_s_set_dialog.html#a18aa91c66ee53933e1872e3bbab7af56">Sfile_full</a>,<a class="code" href="class_u_p_s_set_dialog.html#a2a91cd8555feb6f637e295ac4a6afbbc">Sfile_name</a>,<a class="code" href="class_u_p_s_set_dialog.html#aa09a69b71606c7f8362cae5f58ef9ef4">Sfile_path</a>,<a class="code" href="class_u_p_s_set_dialog.html#a05bc9df52b26fa5e378b7fd78377a7d4">Sfull_name</a>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keyword">private</span> slots:</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_u_p_s_set_dialog.html#a31f0f8dcb15ac3a5b060b832b4dda7d5">on_OpenFilepushButton_clicked</a>();</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_u_p_s_set_dialog.html#a209d9f262cc4a0b7024bd0cdda04d48b">on_SOpenFilepushButton_clicked</a>();</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_u_p_s_set_dialog.html#aaef8d09c518b6401e6d7d966650f753c">on_PowerLowcheckBox_stateChanged</a>(<span class="keywordtype">int</span> arg1);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_u_p_s_set_dialog.html#a3b95a16451d4e4218d42335f5ca604fb">on_EXEcheckBox_stateChanged</a>(<span class="keywordtype">int</span> arg1);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_u_p_s_set_dialog.html#accb7d951407ed574da6e993a5caac85c">on_ShutdowncheckBox_stateChanged</a>(<span class="keywordtype">int</span> arg1);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_u_p_s_set_dialog.html#a6dccab2d9379bff4a1b639b39ba683e1">on_SleepcheckBox_stateChanged</a>(<span class="keywordtype">int</span> arg1);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_u_p_s_set_dialog.html#a400afb0b3c5ddbaa23a9c354975eb3ae">on_SPowerLowcheckBox_stateChanged</a>(<span class="keywordtype">int</span> arg1);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_u_p_s_set_dialog.html#a8f8cc8e37066a35b5584af42c59bfb7d">on_OKpushButton_clicked</a>();</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_u_p_s_set_dialog.html#abcf840f1b27fda324dc4479cd591f0c5">on_CancelpushButton_clicked</a>();</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_u_p_s_set_dialog.html#aa883b15e48b4083db933bb506f281c7a">on_PowerLowValuespinBox_valueChanged</a>(<span class="keywordtype">int</span> arg1);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_u_p_s_set_dialog.html#a075aff63e1c7d0461ec396f47cff9717">on_SPowerLowValuespinBox_valueChanged</a>(<span class="keywordtype">int</span> arg1);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_u_p_s_set_dialog.html#ac04f4e4544b7313c4444bc94f8be0e91">on_SShutdowncheckBox_stateChanged</a>(<span class="keywordtype">int</span> arg1);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_u_p_s_set_dialog.html#a0cb87ae54c18622240f7c89275194a4b">on_SSleepcheckBox_stateChanged</a>(<span class="keywordtype">int</span> arg1);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_u_p_s_set_dialog.html#a7218333508bd6a7010d7e7aaf41e88e7">on_SEXEcheckBox_stateChanged</a>(<span class="keywordtype">int</span> arg1);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_u_p_s_set_dialog.html#ac6d846408fb5e1409eba679281f6f60f">on_LogcheckBox_stateChanged</a>(<span class="keywordtype">int</span> arg1);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="class_u_p_s_set_dialog.html#a0f22078acc19c87688b152c0eb04252b">   82</a></span>&#160;    Ui::UPSSetDialog *<a class="code" href="class_u_p_s_set_dialog.html#a0f22078acc19c87688b152c0eb04252b">ui</a>;</div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="class_u_p_s_set_dialog.html#a88323827c6edeaad8da474175620a0bc">   83</a></span>&#160;    QFileInfo <a class="code" href="class_u_p_s_set_dialog.html#a88323827c6edeaad8da474175620a0bc">fi</a>;</div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="class_u_p_s_set_dialog.html#a6ea114cb91dbff3782d417de7c272493">   84</a></span>&#160;    QFileInfo <a class="code" href="class_u_p_s_set_dialog.html#a6ea114cb91dbff3782d417de7c272493">Sfi</a>;</div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="class_u_p_s_set_dialog.html#a2bcc6d20ad596fec218b989a6a41f480">   85</a></span>&#160;    <a class="code" href="class_q_my_settings.html">QMySettings</a> *<a class="code" href="class_u_p_s_set_dialog.html#a2bcc6d20ad596fec218b989a6a41f480">fileini</a>;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;};</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="preprocessor">#endif // UPSSETDIALOG_H</span></div>
+<div class="ttc" id="class_u_p_s_set_dialog_html_aa9e856192e864177a8efd18e9e7a573e"><div class="ttname"><a href="class_u_p_s_set_dialog.html#aa9e856192e864177a8efd18e9e7a573e">UPSSetDialog::EXE</a></div><div class="ttdeci">bool EXE</div><div class="ttdef"><b>Definition:</b> <a href="upssetdialog_8h_source.html#l00044">upssetdialog.h:44</a></div></div>
+<div class="ttc" id="class_u_p_s_set_dialog_html_a400afb0b3c5ddbaa23a9c354975eb3ae"><div class="ttname"><a href="class_u_p_s_set_dialog.html#a400afb0b3c5ddbaa23a9c354975eb3ae">UPSSetDialog::on_SPowerLowcheckBox_stateChanged</a></div><div class="ttdeci">void on_SPowerLowcheckBox_stateChanged(int arg1)</div><div class="ttdef"><b>Definition:</b> <a href="upssetdialog_8cpp_source.html#l00262">upssetdialog.cpp:262</a></div></div>
+<div class="ttc" id="class_u_p_s_set_dialog_html_a8cbe49ac85dd9459dc951e19e0dba61f"><div class="ttname"><a href="class_u_p_s_set_dialog.html#a8cbe49ac85dd9459dc951e19e0dba61f">UPSSetDialog::SEXE</a></div><div class="ttdeci">bool SEXE</div><div class="ttdef"><b>Definition:</b> <a href="upssetdialog_8h_source.html#l00045">upssetdialog.h:45</a></div></div>
+<div class="ttc" id="class_u_p_s_set_dialog_html_a8f8cc8e37066a35b5584af42c59bfb7d"><div class="ttname"><a href="class_u_p_s_set_dialog.html#a8f8cc8e37066a35b5584af42c59bfb7d">UPSSetDialog::on_OKpushButton_clicked</a></div><div class="ttdeci">void on_OKpushButton_clicked()</div><div class="ttdef"><b>Definition:</b> <a href="upssetdialog_8cpp_source.html#l00290">upssetdialog.cpp:290</a></div></div>
+<div class="ttc" id="class_u_p_s_set_dialog_html_a6dccab2d9379bff4a1b639b39ba683e1"><div class="ttname"><a href="class_u_p_s_set_dialog.html#a6dccab2d9379bff4a1b639b39ba683e1">UPSSetDialog::on_SleepcheckBox_stateChanged</a></div><div class="ttdeci">void on_SleepcheckBox_stateChanged(int arg1)</div><div class="ttdef"><b>Definition:</b> <a href="upssetdialog_8cpp_source.html#l00248">upssetdialog.cpp:248</a></div></div>
+<div class="ttc" id="namespace_ui_html"><div class="ttname"><a href="namespace_ui.html">Ui</a></div><div class="ttdef"><b>Definition:</b> <a href="aboutdialog_8h_source.html#l00021">aboutdialog.h:21</a></div></div>
+<div class="ttc" id="class_u_p_s_set_dialog_html_abcf840f1b27fda324dc4479cd591f0c5"><div class="ttname"><a href="class_u_p_s_set_dialog.html#abcf840f1b27fda324dc4479cd591f0c5">UPSSetDialog::on_CancelpushButton_clicked</a></div><div class="ttdeci">void on_CancelpushButton_clicked()</div><div class="ttdef"><b>Definition:</b> <a href="upssetdialog_8cpp_source.html#l00309">upssetdialog.cpp:309</a></div></div>
+<div class="ttc" id="qmysetting_8h_html"><div class="ttname"><a href="qmysetting_8h.html">qmysetting.h</a></div><div class="ttdoc">qmysetting类头文件 </div></div>
+<div class="ttc" id="class_u_p_s_set_dialog_html_aaef8d09c518b6401e6d7d966650f753c"><div class="ttname"><a href="class_u_p_s_set_dialog.html#aaef8d09c518b6401e6d7d966650f753c">UPSSetDialog::on_PowerLowcheckBox_stateChanged</a></div><div class="ttdeci">void on_PowerLowcheckBox_stateChanged(int arg1)</div><div class="ttdef"><b>Definition:</b> <a href="upssetdialog_8cpp_source.html#l00187">upssetdialog.cpp:187</a></div></div>
+<div class="ttc" id="class_u_p_s_set_dialog_html_a2f90c3892d6d297576205844269bbb0f"><div class="ttname"><a href="class_u_p_s_set_dialog.html#a2f90c3892d6d297576205844269bbb0f">UPSSetDialog::Sleep</a></div><div class="ttdeci">bool Sleep</div><div class="ttdef"><b>Definition:</b> <a href="upssetdialog_8h_source.html#l00042">upssetdialog.h:42</a></div></div>
+<div class="ttc" id="class_u_p_s_set_dialog_html_ac04f4e4544b7313c4444bc94f8be0e91"><div class="ttname"><a href="class_u_p_s_set_dialog.html#ac04f4e4544b7313c4444bc94f8be0e91">UPSSetDialog::on_SShutdowncheckBox_stateChanged</a></div><div class="ttdeci">void on_SShutdowncheckBox_stateChanged(int arg1)</div><div class="ttdef"><b>Definition:</b> <a href="upssetdialog_8cpp_source.html#l00325">upssetdialog.cpp:325</a></div></div>
+<div class="ttc" id="class_u_p_s_set_dialog_html_accb7d951407ed574da6e993a5caac85c"><div class="ttname"><a href="class_u_p_s_set_dialog.html#accb7d951407ed574da6e993a5caac85c">UPSSetDialog::on_ShutdowncheckBox_stateChanged</a></div><div class="ttdeci">void on_ShutdowncheckBox_stateChanged(int arg1)</div><div class="ttdef"><b>Definition:</b> <a href="upssetdialog_8cpp_source.html#l00234">upssetdialog.cpp:234</a></div></div>
+<div class="ttc" id="class_u_p_s_set_dialog_html_a70ba931772911240c509f271cabe8e85"><div class="ttname"><a href="class_u_p_s_set_dialog.html#a70ba931772911240c509f271cabe8e85">UPSSetDialog::SSleep</a></div><div class="ttdeci">bool SSleep</div><div class="ttdef"><b>Definition:</b> <a href="upssetdialog_8h_source.html#l00043">upssetdialog.h:43</a></div></div>
+<div class="ttc" id="class_u_p_s_set_dialog_html_a55c99a5c088ffc83169c7e376e4f5141"><div class="ttname"><a href="class_u_p_s_set_dialog.html#a55c99a5c088ffc83169c7e376e4f5141">UPSSetDialog::UPSSetDialog</a></div><div class="ttdeci">UPSSetDialog(QWidget *parent=0)</div><div class="ttdef"><b>Definition:</b> <a href="upssetdialog_8cpp_source.html#l00020">upssetdialog.cpp:20</a></div></div>
+<div class="ttc" id="class_u_p_s_set_dialog_html_ac6d846408fb5e1409eba679281f6f60f"><div class="ttname"><a href="class_u_p_s_set_dialog.html#ac6d846408fb5e1409eba679281f6f60f">UPSSetDialog::on_LogcheckBox_stateChanged</a></div><div class="ttdeci">void on_LogcheckBox_stateChanged(int arg1)</div><div class="ttdef"><b>Definition:</b> <a href="upssetdialog_8cpp_source.html#l00370">upssetdialog.cpp:370</a></div></div>
+<div class="ttc" id="class_u_p_s_set_dialog_html"><div class="ttname"><a href="class_u_p_s_set_dialog.html">UPSSetDialog</a></div><div class="ttdef"><b>Definition:</b> <a href="upssetdialog_8h_source.html#l00029">upssetdialog.h:29</a></div></div>
+<div class="ttc" id="class_u_p_s_set_dialog_html_ab8dbd205915cae03b521f6047503e10a"><div class="ttname"><a href="class_u_p_s_set_dialog.html#ab8dbd205915cae03b521f6047503e10a">UPSSetDialog::SShutdown</a></div><div class="ttdeci">bool SShutdown</div><div class="ttdef"><b>Definition:</b> <a href="upssetdialog_8h_source.html#l00041">upssetdialog.h:41</a></div></div>
+<div class="ttc" id="class_u_p_s_set_dialog_html_a31f0f8dcb15ac3a5b060b832b4dda7d5"><div class="ttname"><a href="class_u_p_s_set_dialog.html#a31f0f8dcb15ac3a5b060b832b4dda7d5">UPSSetDialog::on_OpenFilepushButton_clicked</a></div><div class="ttdeci">void on_OpenFilepushButton_clicked()</div><div class="ttdef"><b>Definition:</b> <a href="upssetdialog_8cpp_source.html#l00165">upssetdialog.cpp:165</a></div></div>
+<div class="ttc" id="class_u_p_s_set_dialog_html_aef8aae13590f996fe8c81dd1828cbbae"><div class="ttname"><a href="class_u_p_s_set_dialog.html#aef8aae13590f996fe8c81dd1828cbbae">UPSSetDialog::SPowerLow</a></div><div class="ttdeci">bool SPowerLow</div><div class="ttdef"><b>Definition:</b> <a href="upssetdialog_8h_source.html#l00037">upssetdialog.h:37</a></div></div>
+<div class="ttc" id="class_u_p_s_set_dialog_html_a18aa91c66ee53933e1872e3bbab7af56"><div class="ttname"><a href="class_u_p_s_set_dialog.html#a18aa91c66ee53933e1872e3bbab7af56">UPSSetDialog::Sfile_full</a></div><div class="ttdeci">QString Sfile_full</div><div class="ttdef"><b>Definition:</b> <a href="upssetdialog_8h_source.html#l00048">upssetdialog.h:48</a></div></div>
+<div class="ttc" id="class_u_p_s_set_dialog_html_a5db556c5733f0d603e66d740f24e493d"><div class="ttname"><a href="class_u_p_s_set_dialog.html#a5db556c5733f0d603e66d740f24e493d">UPSSetDialog::PowerLowValue</a></div><div class="ttdeci">int PowerLowValue</div><div class="ttdef"><b>Definition:</b> <a href="upssetdialog_8h_source.html#l00038">upssetdialog.h:38</a></div></div>
+<div class="ttc" id="class_u_p_s_set_dialog_html_a839f9e022dc8a0ea5ccf72c6f3950287"><div class="ttname"><a href="class_u_p_s_set_dialog.html#a839f9e022dc8a0ea5ccf72c6f3950287">UPSSetDialog::file_name</a></div><div class="ttdeci">QString file_name</div><div class="ttdef"><b>Definition:</b> <a href="upssetdialog_8h_source.html#l00047">upssetdialog.h:47</a></div></div>
+<div class="ttc" id="class_u_p_s_set_dialog_html_a88323827c6edeaad8da474175620a0bc"><div class="ttname"><a href="class_u_p_s_set_dialog.html#a88323827c6edeaad8da474175620a0bc">UPSSetDialog::fi</a></div><div class="ttdeci">QFileInfo fi</div><div class="ttdef"><b>Definition:</b> <a href="upssetdialog_8h_source.html#l00083">upssetdialog.h:83</a></div></div>
+<div class="ttc" id="class_u_p_s_set_dialog_html_a209d9f262cc4a0b7024bd0cdda04d48b"><div class="ttname"><a href="class_u_p_s_set_dialog.html#a209d9f262cc4a0b7024bd0cdda04d48b">UPSSetDialog::on_SOpenFilepushButton_clicked</a></div><div class="ttdeci">void on_SOpenFilepushButton_clicked()</div><div class="ttdef"><b>Definition:</b> <a href="upssetdialog_8cpp_source.html#l00176">upssetdialog.cpp:176</a></div></div>
+<div class="ttc" id="class_u_p_s_set_dialog_html_a6ea114cb91dbff3782d417de7c272493"><div class="ttname"><a href="class_u_p_s_set_dialog.html#a6ea114cb91dbff3782d417de7c272493">UPSSetDialog::Sfi</a></div><div class="ttdeci">QFileInfo Sfi</div><div class="ttdef"><b>Definition:</b> <a href="upssetdialog_8h_source.html#l00084">upssetdialog.h:84</a></div></div>
+<div class="ttc" id="class_u_p_s_set_dialog_html_a2a91cd8555feb6f637e295ac4a6afbbc"><div class="ttname"><a href="class_u_p_s_set_dialog.html#a2a91cd8555feb6f637e295ac4a6afbbc">UPSSetDialog::Sfile_name</a></div><div class="ttdeci">QString Sfile_name</div><div class="ttdef"><b>Definition:</b> <a href="upssetdialog_8h_source.html#l00048">upssetdialog.h:48</a></div></div>
+<div class="ttc" id="class_u_p_s_set_dialog_html_a57b67652fbfec00b5b79b3c4922a7721"><div class="ttname"><a href="class_u_p_s_set_dialog.html#a57b67652fbfec00b5b79b3c4922a7721">UPSSetDialog::file_path</a></div><div class="ttdeci">QString file_path</div><div class="ttdef"><b>Definition:</b> <a href="upssetdialog_8h_source.html#l00047">upssetdialog.h:47</a></div></div>
+<div class="ttc" id="class_u_p_s_set_dialog_html_a1e193e56594c3fb6240e7529c63255eb"><div class="ttname"><a href="class_u_p_s_set_dialog.html#a1e193e56594c3fb6240e7529c63255eb">UPSSetDialog::~UPSSetDialog</a></div><div class="ttdeci">~UPSSetDialog()</div><div class="ttdef"><b>Definition:</b> <a href="upssetdialog_8cpp_source.html#l00160">upssetdialog.cpp:160</a></div></div>
+<div class="ttc" id="class_q_my_settings_html"><div class="ttname"><a href="class_q_my_settings.html">QMySettings</a></div><div class="ttdef"><b>Definition:</b> <a href="qmysetting_8h_source.html#l00024">qmysetting.h:24</a></div></div>
+<div class="ttc" id="class_u_p_s_set_dialog_html_a77f2d73ee449283cf5fe16a39962d3fd"><div class="ttname"><a href="class_u_p_s_set_dialog.html#a77f2d73ee449283cf5fe16a39962d3fd">UPSSetDialog::PowerLow</a></div><div class="ttdeci">bool PowerLow</div><div class="ttdef"><b>Definition:</b> <a href="upssetdialog_8h_source.html#l00036">upssetdialog.h:36</a></div></div>
+<div class="ttc" id="class_u_p_s_set_dialog_html_a075aff63e1c7d0461ec396f47cff9717"><div class="ttname"><a href="class_u_p_s_set_dialog.html#a075aff63e1c7d0461ec396f47cff9717">UPSSetDialog::on_SPowerLowValuespinBox_valueChanged</a></div><div class="ttdeci">void on_SPowerLowValuespinBox_valueChanged(int arg1)</div><div class="ttdef"><b>Definition:</b> <a href="upssetdialog_8cpp_source.html#l00320">upssetdialog.cpp:320</a></div></div>
+<div class="ttc" id="class_u_p_s_set_dialog_html_aa883b15e48b4083db933bb506f281c7a"><div class="ttname"><a href="class_u_p_s_set_dialog.html#aa883b15e48b4083db933bb506f281c7a">UPSSetDialog::on_PowerLowValuespinBox_valueChanged</a></div><div class="ttdeci">void on_PowerLowValuespinBox_valueChanged(int arg1)</div><div class="ttdef"><b>Definition:</b> <a href="upssetdialog_8cpp_source.html#l00314">upssetdialog.cpp:314</a></div></div>
+<div class="ttc" id="class_u_p_s_set_dialog_html_ae56ec928b92c2112cab77fe076e82888"><div class="ttname"><a href="class_u_p_s_set_dialog.html#ae56ec928b92c2112cab77fe076e82888">UPSSetDialog::full_name</a></div><div class="ttdeci">QString full_name</div><div class="ttdef"><b>Definition:</b> <a href="upssetdialog_8h_source.html#l00047">upssetdialog.h:47</a></div></div>
+<div class="ttc" id="class_u_p_s_set_dialog_html_a6e3126536ab663a9e6d5caa7f52b6f9d"><div class="ttname"><a href="class_u_p_s_set_dialog.html#a6e3126536ab663a9e6d5caa7f52b6f9d">UPSSetDialog::file_full</a></div><div class="ttdeci">QString file_full</div><div class="ttdef"><b>Definition:</b> <a href="upssetdialog_8h_source.html#l00047">upssetdialog.h:47</a></div></div>
+<div class="ttc" id="class_u_p_s_set_dialog_html_afefcbe466243c399eefd9436415d15c4"><div class="ttname"><a href="class_u_p_s_set_dialog.html#afefcbe466243c399eefd9436415d15c4">UPSSetDialog::Shutdown</a></div><div class="ttdeci">bool Shutdown</div><div class="ttdef"><b>Definition:</b> <a href="upssetdialog_8h_source.html#l00040">upssetdialog.h:40</a></div></div>
+<div class="ttc" id="class_u_p_s_set_dialog_html_af14c3182842cced48a267aa21eea362e"><div class="ttname"><a href="class_u_p_s_set_dialog.html#af14c3182842cced48a267aa21eea362e">UPSSetDialog::SPowerLowValue</a></div><div class="ttdeci">int SPowerLowValue</div><div class="ttdef"><b>Definition:</b> <a href="upssetdialog_8h_source.html#l00039">upssetdialog.h:39</a></div></div>
+<div class="ttc" id="class_u_p_s_set_dialog_html_a7218333508bd6a7010d7e7aaf41e88e7"><div class="ttname"><a href="class_u_p_s_set_dialog.html#a7218333508bd6a7010d7e7aaf41e88e7">UPSSetDialog::on_SEXEcheckBox_stateChanged</a></div><div class="ttdeci">void on_SEXEcheckBox_stateChanged(int arg1)</div><div class="ttdef"><b>Definition:</b> <a href="upssetdialog_8cpp_source.html#l00353">upssetdialog.cpp:353</a></div></div>
+<div class="ttc" id="class_u_p_s_set_dialog_html_a0cb87ae54c18622240f7c89275194a4b"><div class="ttname"><a href="class_u_p_s_set_dialog.html#a0cb87ae54c18622240f7c89275194a4b">UPSSetDialog::on_SSleepcheckBox_stateChanged</a></div><div class="ttdeci">void on_SSleepcheckBox_stateChanged(int arg1)</div><div class="ttdef"><b>Definition:</b> <a href="upssetdialog_8cpp_source.html#l00339">upssetdialog.cpp:339</a></div></div>
+<div class="ttc" id="class_u_p_s_set_dialog_html_aa09a69b71606c7f8362cae5f58ef9ef4"><div class="ttname"><a href="class_u_p_s_set_dialog.html#aa09a69b71606c7f8362cae5f58ef9ef4">UPSSetDialog::Sfile_path</a></div><div class="ttdeci">QString Sfile_path</div><div class="ttdef"><b>Definition:</b> <a href="upssetdialog_8h_source.html#l00048">upssetdialog.h:48</a></div></div>
+<div class="ttc" id="class_u_p_s_set_dialog_html_a05bc9df52b26fa5e378b7fd78377a7d4"><div class="ttname"><a href="class_u_p_s_set_dialog.html#a05bc9df52b26fa5e378b7fd78377a7d4">UPSSetDialog::Sfull_name</a></div><div class="ttdeci">QString Sfull_name</div><div class="ttdef"><b>Definition:</b> <a href="upssetdialog_8h_source.html#l00048">upssetdialog.h:48</a></div></div>
+<div class="ttc" id="class_u_p_s_set_dialog_html_a2bcc6d20ad596fec218b989a6a41f480"><div class="ttname"><a href="class_u_p_s_set_dialog.html#a2bcc6d20ad596fec218b989a6a41f480">UPSSetDialog::fileini</a></div><div class="ttdeci">QMySettings * fileini</div><div class="ttdef"><b>Definition:</b> <a href="upssetdialog_8h_source.html#l00085">upssetdialog.h:85</a></div></div>
+<div class="ttc" id="class_u_p_s_set_dialog_html_a3b95a16451d4e4218d42335f5ca604fb"><div class="ttname"><a href="class_u_p_s_set_dialog.html#a3b95a16451d4e4218d42335f5ca604fb">UPSSetDialog::on_EXEcheckBox_stateChanged</a></div><div class="ttdeci">void on_EXEcheckBox_stateChanged(int arg1)</div><div class="ttdef"><b>Definition:</b> <a href="upssetdialog_8cpp_source.html#l00216">upssetdialog.cpp:216</a></div></div>
+<div class="ttc" id="class_u_p_s_set_dialog_html_a0f22078acc19c87688b152c0eb04252b"><div class="ttname"><a href="class_u_p_s_set_dialog.html#a0f22078acc19c87688b152c0eb04252b">UPSSetDialog::ui</a></div><div class="ttdeci">Ui::UPSSetDialog * ui</div><div class="ttdef"><b>Definition:</b> <a href="upssetdialog_8h_source.html#l00082">upssetdialog.h:82</a></div></div>
+<div class="ttc" id="class_u_p_s_set_dialog_html_adf5ad92713763033856147cac64df97f"><div class="ttname"><a href="class_u_p_s_set_dialog.html#adf5ad92713763033856147cac64df97f">UPSSetDialog::Log</a></div><div class="ttdeci">bool Log</div><div class="ttdef"><b>Definition:</b> <a href="upssetdialog_8h_source.html#l00046">upssetdialog.h:46</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.10
+</small></address>
+</body>
+</html>

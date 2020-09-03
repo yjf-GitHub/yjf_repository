@@ -1,0 +1,18 @@
+<map id="QMySettings::toXOREncryptUncrypt" name="QMySettings::toXOREncryptUncrypt">
+<area shape="rect" id="node2" href="$class_q_my_settings.html#a5914d92eeab0683d4dc0734530ba6d1e" title="加密函数 " alt="" coords="241,374,392,401"/>
+<area shape="rect" id="node10" href="$class_q_my_settings.html#a626dee750fbb1cbd0f23995e73d4abc3" title="解密函数 " alt="" coords="241,279,392,306"/>
+<area shape="rect" id="node3" href="$class_q_my_settings.html#a8f1323aa517ba2fbeaf1c00ca282a3a6" title="设置配置文件加密数据 " alt="" coords="440,462,597,489"/>
+<area shape="rect" id="node4" href="$class_about_dialog.html#ad96fc2ce8de7568ace543b7c69c71c56" title="AboutDialog::AboutDialog" alt="" coords="914,374,1085,401"/>
+<area shape="rect" id="node5" href="$class_main_window.html#a8b244be8b7b7db1b08de2a2acb9409db" title="MainWindow::MainWindow" alt="" coords="1135,122,1313,149"/>
+<area shape="rect" id="node6" href="$class_main_window.html#a33f6f98b9a88bb79519d683d5d12f53b" title="触发设置动作 " alt="" coords="675,425,835,467"/>
+<area shape="rect" id="node7" href="$class_port_dialog.html#a92d318f4fc846702ea9f68adf674659b" title="确认按钮 " alt="" coords="679,308,831,349"/>
+<area shape="rect" id="node9" href="$class_u_p_s_set_dialog.html#a8f8cc8e37066a35b5584af42c59bfb7d" title="UPSSetDialog::on_OKpushButton\l_clicked" alt="" coords="645,543,864,584"/>
+<area shape="rect" id="node8" href="$class_port_dialog.html#ae9170ab6ce6166773f95601f76e81fbc" title="构造函数 " alt="" coords="924,173,1075,199"/>
+<area shape="rect" id="node11" href="$class_q_my_settings.html#a9cadff7acc3bbb325b00c6d581e0a34b" title="读取配置文件数据并解密 " alt="" coords="451,206,586,233"/>
+<area shape="rect" id="node12" href="$classgetthread.html#ae9be116600f6de1e14693bed96e33467" title="线程运行函数，检测是否开关机UPS，发送串口获取UPS状态数据及接收串口返回数据 " alt="" coords="703,155,806,182"/>
+<area shape="rect" id="node13" href="$class_main_window.html#a78539d4666fb43b185e26afe3158f7fa" title="更新时间表 " alt="" coords="669,54,841,81"/>
+<area shape="rect" id="node15" href="$class_port_dialog.html#ade948fc9f5f8a0f4a3fbfd4a587a42b7" title="每周例程填充界面 " alt="" coords="671,105,839,131"/>
+<area shape="rect" id="node16" href="$class_q_my_settings.html#a4e4d0b707ca4cff7c0287e91371ad555" title="判断ini文件是否存在 " alt="" coords="674,374,835,401"/>
+<area shape="rect" id="node17" href="$class_u_p_s_set_dialog.html#a55c99a5c088ffc83169c7e376e4f5141" title="UPSSetDialog::UPSSetDialog" alt="" coords="657,206,853,233"/>
+<area shape="rect" id="node14" href="$class_main_window.html#a6f593bb60a08b08e62865970075f45b2" title="每秒更新一次，检测当前时间是否与设置开关机时间相等 " alt="" coords="912,87,1087,114"/>
+</map>

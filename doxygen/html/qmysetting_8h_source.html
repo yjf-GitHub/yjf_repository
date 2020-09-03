@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.10"/>
+<title>GtUPSMate: qmysetting.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">GtUPSMate
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.10 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li><a href="annotated.html"><span>结构体</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>全局定义</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">qmysetting.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="qmysetting_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#ifndef QMYSETTING_H</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#define QMYSETTING_H</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">//class QSettings;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor"> #include &lt;QSettings&gt;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">class </span>QString;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">class </span>QVariant;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">class </span>QChar;</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="class_q_my_settings.html">   24</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_q_my_settings.html">QMySettings</a>:<span class="keyword">public</span> QSettings</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">//    Q_OBJECT</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">//    QMySetting(const QString &amp;organization, const QString &amp;application = QString(), QObject *parent = Q_NULLPTR):QSettings(organization,application, parent) {};</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">//    QMySetting(Scope scope, const QString &amp;organization, const QString &amp;application = QString(), QObject *parent = Q_NULLPTR): \</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">//        QSettings(scope,organization, application, parent) {};</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">//    QMySetting(Format format, Scope scope, const QString &amp;organization, const QString &amp;application = QString(), QObject *parent = Q_NULLPTR): \</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">//        QSettings(format, scope, organization, application, parent) {};</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">//    QMySetting(const QString &amp;fileName, Format format, QObject *parent = Q_NULLPTR): \</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">//        QSettings(fileName, format, parent) {};</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">//    QMySetting(QObject *parent = Q_NULLPTR):QSettings(parent) {};</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keyword">using</span> QSettings::QSettings;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_q_my_settings.html#a8f1323aa517ba2fbeaf1c00ca282a3a6">setValue</a>(<span class="keyword">const</span> QString &amp;key, <span class="keyword">const</span> QVariant &amp;<a class="code" href="class_q_my_settings.html#a9cadff7acc3bbb325b00c6d581e0a34b">value</a>);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">//    QVariant value(const QString &amp;key, const QVariant &amp;defaultValue = QVariant()) ;</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    QVariant <a class="code" href="class_q_my_settings.html#a9cadff7acc3bbb325b00c6d581e0a34b">value</a>(<span class="keyword">const</span> QString &amp;key,<span class="keyword">const</span> QVariant &amp;defaultValue = QVariant());</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_q_my_settings.html#a4e4d0b707ca4cff7c0287e91371ad555">isEncrypt</a>(<span class="keyword">const</span> QString &amp;key);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    QString <a class="code" href="class_q_my_settings.html#a626dee750fbb1cbd0f23995e73d4abc3">Decrypt</a>(QString src);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    QString <a class="code" href="class_q_my_settings.html#a5914d92eeab0683d4dc0734530ba6d1e">Encrypt</a>(QString src);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    QString <a class="code" href="class_q_my_settings.html#a564f7162cb3680166629580268ec0702">toXOREncryptUncrypt</a>(QString src, <span class="keyword">const</span> QChar key);</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="class_q_my_settings.html#a64320dafdef2d28692f0f36fcdf9e09c">   46</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_q_my_settings.html#a64320dafdef2d28692f0f36fcdf9e09c">m_nIsEncrypt</a>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;};</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">#endif // QMYSETTING_H</span></div>
+<div class="ttc" id="class_q_my_settings_html_a8f1323aa517ba2fbeaf1c00ca282a3a6"><div class="ttname"><a href="class_q_my_settings.html#a8f1323aa517ba2fbeaf1c00ca282a3a6">QMySettings::setValue</a></div><div class="ttdeci">void setValue(const QString &amp;key, const QVariant &amp;value)</div><div class="ttdoc">设置配置文件加密数据 </div><div class="ttdef"><b>Definition:</b> <a href="qmysetting_8cpp_source.html#l00088">qmysetting.cpp:88</a></div></div>
+<div class="ttc" id="class_q_my_settings_html_a9cadff7acc3bbb325b00c6d581e0a34b"><div class="ttname"><a href="class_q_my_settings.html#a9cadff7acc3bbb325b00c6d581e0a34b">QMySettings::value</a></div><div class="ttdeci">QVariant value(const QString &amp;key, const QVariant &amp;defaultValue=QVariant())</div><div class="ttdoc">读取配置文件数据并解密 </div><div class="ttdef"><b>Definition:</b> <a href="qmysetting_8cpp_source.html#l00110">qmysetting.cpp:110</a></div></div>
+<div class="ttc" id="class_q_my_settings_html_a64320dafdef2d28692f0f36fcdf9e09c"><div class="ttname"><a href="class_q_my_settings.html#a64320dafdef2d28692f0f36fcdf9e09c">QMySettings::m_nIsEncrypt</a></div><div class="ttdeci">bool m_nIsEncrypt</div><div class="ttdef"><b>Definition:</b> <a href="qmysetting_8h_source.html#l00046">qmysetting.h:46</a></div></div>
+<div class="ttc" id="class_q_my_settings_html_a4e4d0b707ca4cff7c0287e91371ad555"><div class="ttname"><a href="class_q_my_settings.html#a4e4d0b707ca4cff7c0287e91371ad555">QMySettings::isEncrypt</a></div><div class="ttdeci">bool isEncrypt(const QString &amp;key)</div><div class="ttdoc">判断ini文件是否存在 </div><div class="ttdef"><b>Definition:</b> <a href="qmysetting_8cpp_source.html#l00121">qmysetting.cpp:121</a></div></div>
+<div class="ttc" id="class_q_my_settings_html_a626dee750fbb1cbd0f23995e73d4abc3"><div class="ttname"><a href="class_q_my_settings.html#a626dee750fbb1cbd0f23995e73d4abc3">QMySettings::Decrypt</a></div><div class="ttdeci">QString Decrypt(QString src)</div><div class="ttdoc">解密函数 </div><div class="ttdef"><b>Definition:</b> <a href="qmysetting_8cpp_source.html#l00063">qmysetting.cpp:63</a></div></div>
+<div class="ttc" id="class_q_my_settings_html_a5914d92eeab0683d4dc0734530ba6d1e"><div class="ttname"><a href="class_q_my_settings.html#a5914d92eeab0683d4dc0734530ba6d1e">QMySettings::Encrypt</a></div><div class="ttdeci">QString Encrypt(QString src)</div><div class="ttdoc">加密函数 </div><div class="ttdef"><b>Definition:</b> <a href="qmysetting_8cpp_source.html#l00046">qmysetting.cpp:46</a></div></div>
+<div class="ttc" id="class_q_my_settings_html"><div class="ttname"><a href="class_q_my_settings.html">QMySettings</a></div><div class="ttdef"><b>Definition:</b> <a href="qmysetting_8h_source.html#l00024">qmysetting.h:24</a></div></div>
+<div class="ttc" id="class_q_my_settings_html_a564f7162cb3680166629580268ec0702"><div class="ttname"><a href="class_q_my_settings.html#a564f7162cb3680166629580268ec0702">QMySettings::toXOREncryptUncrypt</a></div><div class="ttdeci">QString toXOREncryptUncrypt(QString src, const QChar key)</div><div class="ttdoc">加解密方法 </div><div class="ttdef"><b>Definition:</b> <a href="qmysetting_8cpp_source.html#l00034">qmysetting.cpp:34</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.10
+</small></address>
+</body>
+</html>

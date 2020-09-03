@@ -1,0 +1,25 @@
+var searchData=
+[
+  ['serialport',['serialport',['../classgetthread.html#a2bb79d4bb929ca4434ef162a2b073566',1,'getthread']]],
+  ['sexe',['SEXE',['../class_main_window.html#a159e990bdea2abb5685e33504a55c794',1,'MainWindow::SEXE()'],['../class_u_p_s_set_dialog.html#a8cbe49ac85dd9459dc951e19e0dba61f',1,'UPSSetDialog::SEXE()']]],
+  ['sfi',['Sfi',['../class_u_p_s_set_dialog.html#a6ea114cb91dbff3782d417de7c272493',1,'UPSSetDialog']]],
+  ['sfile_5ffull',['Sfile_full',['../class_u_p_s_set_dialog.html#a18aa91c66ee53933e1872e3bbab7af56',1,'UPSSetDialog']]],
+  ['sfile_5fname',['Sfile_name',['../class_u_p_s_set_dialog.html#a2a91cd8555feb6f637e295ac4a6afbbc',1,'UPSSetDialog']]],
+  ['sfile_5fpath',['Sfile_path',['../class_u_p_s_set_dialog.html#aa09a69b71606c7f8362cae5f58ef9ef4',1,'UPSSetDialog']]],
+  ['sfull_5fname',['Sfull_name',['../class_main_window.html#a500335d3343505beb261ff242b29f3b9',1,'MainWindow::Sfull_name()'],['../class_u_p_s_set_dialog.html#a05bc9df52b26fa5e378b7fd78377a7d4',1,'UPSSetDialog::Sfull_name()']]],
+  ['shutdown',['Shutdown',['../class_main_window.html#a2ba8fd15ee188c95151eb1190f8b2d7a',1,'MainWindow::Shutdown()'],['../class_u_p_s_set_dialog.html#afefcbe466243c399eefd9436415d15c4',1,'UPSSetDialog::Shutdown()']]],
+  ['sleep',['Sleep',['../class_main_window.html#a3d4a02c27a1197c7098744717a633e27',1,'MainWindow::Sleep()'],['../class_u_p_s_set_dialog.html#a2f90c3892d6d297576205844269bbb0f',1,'UPSSetDialog::Sleep()']]],
+  ['spowerlow',['SPowerLow',['../class_main_window.html#a2f43bb55f62b851fd783a1eeed7d7ddf',1,'MainWindow::SPowerLow()'],['../class_u_p_s_set_dialog.html#aef8aae13590f996fe8c81dd1828cbbae',1,'UPSSetDialog::SPowerLow()']]],
+  ['spowerlowvalue',['SPowerLowValue',['../class_main_window.html#a5af514fb4c7f23b08f9f6c030adab3fd',1,'MainWindow::SPowerLowValue()'],['../class_u_p_s_set_dialog.html#af14c3182842cced48a267aa21eea362e',1,'UPSSetDialog::SPowerLowValue()']]],
+  ['sshutdown',['SShutdown',['../class_main_window.html#a4222c10736821e9de9e113818ebb8f80',1,'MainWindow::SShutdown()'],['../class_u_p_s_set_dialog.html#ab8dbd205915cae03b521f6047503e10a',1,'UPSSetDialog::SShutdown()']]],
+  ['ssleep',['SSleep',['../class_main_window.html#a06b03fad56883da94bbdf6f0bd8d8edb',1,'MainWindow::SSleep()'],['../class_u_p_s_set_dialog.html#a70ba931772911240c509f271cabe8e85',1,'UPSSetDialog::SSleep()']]],
+  ['statuslabel',['statusLabel',['../class_main_window.html#ac68fb8d23913c7e25906ad05d0e9d218',1,'MainWindow']]],
+  ['stopbit',['stopbit',['../struct_p_o_r_t_i_n_f_o.html#a7c8068257b2480ef0742f4e0c3932a09',1,'PORTINFO']]],
+  ['stopped',['stopped',['../classgetthread.html#a95ea9e3204e152d8fe482f844051ce5b',1,'getthread']]],
+  ['str_5fbaud',['str_baud',['../class_port_dialog.html#aca18516b326e9ca57a69eb6324ef13d4',1,'PortDialog']]],
+  ['str_5fdata',['str_data',['../class_port_dialog.html#a670ca31d474ce87eaea0a3b50235b8d7',1,'PortDialog']]],
+  ['str_5fparitv',['str_paritv',['../class_port_dialog.html#a3ac1e95dfcc0e1f0a4e41191a9c3ad16',1,'PortDialog']]],
+  ['str_5fport',['str_port',['../class_port_dialog.html#a647620e0c1f7d01d6c679fc7d53df055',1,'PortDialog']]],
+  ['str_5fstopbit',['str_stopBit',['../class_port_dialog.html#a56776d3a299c8b0310e1adf12a279df9',1,'PortDialog']]],
+  ['strtitle',['StrTitle',['../class_main_window.html#a943541e1e897986d7e24b69fa86dec60',1,'MainWindow']]]
+];

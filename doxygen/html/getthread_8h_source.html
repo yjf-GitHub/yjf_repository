@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.10"/>
+<title>GtUPSMate: getthread.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">GtUPSMate
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.10 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li><a href="annotated.html"><span>结构体</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>全局定义</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">getthread.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="getthread_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#ifndef GETTHREAD_H</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#define GETTHREAD_H</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;QObject&gt;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;QThread&gt;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;QMutex&gt;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;QEventLoop&gt;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;QSerialPort&gt;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;QSerialPortInfo&gt;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;QDebug&gt;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;QByteArray&gt;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">extern</span> QMutex <a class="code" href="getthread_8h.html#a89185254bdefe479429741483995b23e">portMutex</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">bool</span> <a class="code" href="getthread_8h.html#a1dd6610afe8d41c833c2b852b2a2d55e">portInfoUpdataSign</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="classgetthread.html">   29</a></span>&#160;<span class="keyword">class </span><a class="code" href="classgetthread.html">getthread</a> : <span class="keyword">public</span> QThread</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;{</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;     Q_OBJECT</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="classgetthread.html#ab4c55faab2fbe4835a84ee5389a11fca">getthread</a>(QObject *parent=0);</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classgetthread.html#a95ea9e3204e152d8fe482f844051ce5b">   34</a></span>&#160;    <span class="keyword">volatile</span> <span class="keywordtype">bool</span> <a class="code" href="classgetthread.html#a95ea9e3204e152d8fe482f844051ce5b">stopped</a>=<span class="keyword">false</span>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">public</span> slots:</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classgetthread.html#a3c7233e538fbe91eac3bd6a770dc4036">recvmsg</a>();</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;signals:</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classgetthread.html#a64cdc3add08058a9aa9d8f479a06c557">recevice_data_sign</a>(QByteArray,QByteArray,QByteArray);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classgetthread.html#a8d1481fb23dead07c8a5bd4c0600fbfc">recevice_data_APC_sign</a>(QByteArray,QByteArray,QByteArray,QByteArray,QByteArray,QByteArray);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classgetthread.html#a2f532312a389e4be2ce197f2db632e62">PortError</a>(QString);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classgetthread.html#ae9be116600f6de1e14693bed96e33467">run</a>();</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="classgetthread.html#a2bb79d4bb929ca4434ef162a2b073566">   44</a></span>&#160;    QSerialPort * <a class="code" href="classgetthread.html#a2bb79d4bb929ca4434ef162a2b073566">serialport</a>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;};</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#endif // GETTHREAD_H</span></div>
+<div class="ttc" id="classgetthread_html_a3c7233e538fbe91eac3bd6a770dc4036"><div class="ttname"><a href="classgetthread.html#a3c7233e538fbe91eac3bd6a770dc4036">getthread::recvmsg</a></div><div class="ttdeci">void recvmsg()</div><div class="ttdoc">调试功能，打印接收串口数据 </div><div class="ttdef"><b>Definition:</b> <a href="getthread_8cpp_source.html#l00031">getthread.cpp:31</a></div></div>
+<div class="ttc" id="classgetthread_html_ab4c55faab2fbe4835a84ee5389a11fca"><div class="ttname"><a href="classgetthread.html#ab4c55faab2fbe4835a84ee5389a11fca">getthread::getthread</a></div><div class="ttdeci">getthread(QObject *parent=0)</div><div class="ttdoc">构造函数 </div><div class="ttdef"><b>Definition:</b> <a href="getthread_8cpp_source.html#l00023">getthread.cpp:23</a></div></div>
+<div class="ttc" id="classgetthread_html_a8d1481fb23dead07c8a5bd4c0600fbfc"><div class="ttname"><a href="classgetthread.html#a8d1481fb23dead07c8a5bd4c0600fbfc">getthread::recevice_data_APC_sign</a></div><div class="ttdeci">void recevice_data_APC_sign(QByteArray, QByteArray, QByteArray, QByteArray, QByteArray, QByteArray)</div><div class="ttdoc">接收串口数据的信号（APC smart协议） </div></div>
+<div class="ttc" id="classgetthread_html_a95ea9e3204e152d8fe482f844051ce5b"><div class="ttname"><a href="classgetthread.html#a95ea9e3204e152d8fe482f844051ce5b">getthread::stopped</a></div><div class="ttdeci">volatile bool stopped</div><div class="ttdef"><b>Definition:</b> <a href="getthread_8h_source.html#l00034">getthread.h:34</a></div></div>
+<div class="ttc" id="classgetthread_html_ae9be116600f6de1e14693bed96e33467"><div class="ttname"><a href="classgetthread.html#ae9be116600f6de1e14693bed96e33467">getthread::run</a></div><div class="ttdeci">void run()</div><div class="ttdoc">线程运行函数，检测是否开关机UPS，发送串口获取UPS状态数据及接收串口返回数据 </div><div class="ttdef"><b>Definition:</b> <a href="getthread_8cpp_source.html#l00042">getthread.cpp:42</a></div></div>
+<div class="ttc" id="classgetthread_html_a64cdc3add08058a9aa9d8f479a06c557"><div class="ttname"><a href="classgetthread.html#a64cdc3add08058a9aa9d8f479a06c557">getthread::recevice_data_sign</a></div><div class="ttdeci">void recevice_data_sign(QByteArray, QByteArray, QByteArray)</div><div class="ttdoc">接收串口数据的信号（UPS标准协议） </div></div>
+<div class="ttc" id="getthread_8h_html_a89185254bdefe479429741483995b23e"><div class="ttname"><a href="getthread_8h.html#a89185254bdefe479429741483995b23e">portMutex</a></div><div class="ttdeci">QMutex portMutex</div><div class="ttdoc">全局互斥锁 </div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8cpp_source.html#l00027">mainwindow.cpp:27</a></div></div>
+<div class="ttc" id="classgetthread_html"><div class="ttname"><a href="classgetthread.html">getthread</a></div><div class="ttdef"><b>Definition:</b> <a href="getthread_8h_source.html#l00029">getthread.h:29</a></div></div>
+<div class="ttc" id="classgetthread_html_a2f532312a389e4be2ce197f2db632e62"><div class="ttname"><a href="classgetthread.html#a2f532312a389e4be2ce197f2db632e62">getthread::PortError</a></div><div class="ttdeci">void PortError(QString)</div><div class="ttdoc">端口错误信号 </div></div>
+<div class="ttc" id="classgetthread_html_a2bb79d4bb929ca4434ef162a2b073566"><div class="ttname"><a href="classgetthread.html#a2bb79d4bb929ca4434ef162a2b073566">getthread::serialport</a></div><div class="ttdeci">QSerialPort * serialport</div><div class="ttdef"><b>Definition:</b> <a href="getthread_8h_source.html#l00044">getthread.h:44</a></div></div>
+<div class="ttc" id="getthread_8h_html_a1dd6610afe8d41c833c2b852b2a2d55e"><div class="ttname"><a href="getthread_8h.html#a1dd6610afe8d41c833c2b852b2a2d55e">portInfoUpdataSign</a></div><div class="ttdeci">bool portInfoUpdataSign</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8cpp_source.html#l00028">mainwindow.cpp:28</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.10
+</small></address>
+</body>
+</html>

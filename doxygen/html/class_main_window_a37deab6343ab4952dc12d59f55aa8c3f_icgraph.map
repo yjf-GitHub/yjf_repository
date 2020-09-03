@@ -1,0 +1,6 @@
+<map id="MainWindow::InterfaceUpdate_Sign" name="MainWindow::InterfaceUpdate_Sign">
+<area shape="rect" id="node2" href="$class_main_window.html#a8b244be8b7b7db1b08de2a2acb9409db" title="MainWindow::MainWindow" alt="" coords="521,26,700,52"/>
+<area shape="rect" id="node3" href="$class_main_window.html#a139a197f8a3a5595b1159c258df97af9" title="接收串口数据并解析数据（UPS标准协议） " alt="" coords="297,26,456,52"/>
+<area shape="rect" id="node4" href="$class_main_window.html#ab3c3e6f7193e26414634cb2da59df8aa" title="接收串口数据并解析数据（APC smart协议） " alt="" coords="280,76,473,103"/>
+<area shape="rect" id="node5" href="$class_main_window.html#a33f6f98b9a88bb79519d683d5d12f53b" title="触发设置动作 " alt="" coords="297,128,457,169"/>
+</map>
